@@ -1,5 +1,5 @@
 {
-    "namountOrderPickers": 10,
+    "amountOrderPickers": 10,
     "capacity": 3,
     "maxTimePerRound": 60,
     "amountOrders": 3,
