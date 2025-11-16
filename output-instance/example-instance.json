@@ -4,18 +4,18 @@
     "maxTimePerRound": 60,
     "amountOrders": 3,
     "amountWarehouses": 10,
-    "productLocations": {
-        "0": 5,
-        "1": 7,
-        "2": 2,
-        "3": 9,
-        "4": 1,
-        "5": 3,
-        "6": 4,
-        "7": 8,
-        "8": 6,
-        "9": 0
-    },
+    "productLocations": [
+        5,
+        7,
+        2,
+        9,
+        1,
+        3,
+        4,
+        8,
+        6,
+        0
+    ],
     "travelTimeMatrix": [
         [
             999,
@@ -161,22 +161,22 @@
             999
         ]
     ],
-    "ordersProducts": {
-        "0": [
+    "ordersProducts": [
+        [
             1,
             5,
             4
         ],
-        "1": [
+        [
             3,
             2,
             6,
             9
         ],
-        "2": [
+        [
             0,
             7,
             8
         ]
-    }
+    ]
 }

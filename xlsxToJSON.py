@@ -27,9 +27,9 @@ sheet_orderList.columns = [col.lower() for col in sheet_orderList.columns]
 locationList = sheet_productLocations["location"].tolist()
 productList = sheet_productLocations["product"].tolist()
 
-productLocationsDict = {}
+productLocationsCollection = []
 for i in range(len(productList)):
-    productLocationsDict[int(locationList[i])] = productList[i]
+    productLocationsCollection.append(productList[i])
 
 # Extract travel time matrix
 travelTimeMatrix = sheet_travelTimeMatrix.values.tolist()
@@ -38,11 +38,11 @@ travelTimeMatrix = sheet_travelTimeMatrix.values.tolist()
 orderIDs = sheet_orderList["order"].tolist()
 orderProducts = sheet_orderList["products"].tolist()
 
-ordersProductsDict = {}
+ordersProductsCollection = []
 
 for i in range(len(orderIDs)):
     products = [int(p) for p in orderProducts[i].split(',')]
-    ordersProductsDict[int(orderIDs[i])] = products
+    ordersProductsCollection.append(products)
 
 # Build dictionary to write to JSON
 data = {
@@ -51,9 +51,9 @@ data = {
     "maxTimePerRound": maxTimePerRound,
     "amountOrders": amountOrders,
     "amountWarehouses": amountWarehouses,
-    "productLocations": productLocationsDict,
+    "productLocations": productLocationsCollection,
     "travelTimeMatrix": travelTimeMatrix,
-    "ordersProducts": ordersProductsDict
+    "ordersProducts": ordersProductsCollection
 }
 
 # Write to JSON file
