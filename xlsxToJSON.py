@@ -1,6 +1,7 @@
 import sys
 import pandas as pd
 import json
+from math import ceil
 
 excelFile = sys.argv[1]
 jsonFile = sys.argv[2]
@@ -44,6 +45,13 @@ for i in range(len(orderIDs)):
     products = [int(p) for p in orderProducts[i].split(',')]
     ordersProductsCollection.append(products)
 
+items = []
+for order in ordersProductsCollection:
+    for item in order:
+        items.append(item)
+
+maxRoundsPerOrderPicker = len(items)
+
 # Build dictionary to write to JSON
 data = {
     "amountOrderPickers": amountOrderPickers,
@@ -53,7 +61,8 @@ data = {
     "amountWarehouses": amountWarehouses,
     "productLocations": productLocationsCollection,
     "travelTimeMatrix": travelTimeMatrix,
-    "ordersProducts": ordersProductsCollection
+    "items": items,
+    "maxRoundsPerOrderPicker": maxRoundsPerOrderPicker
 }
 
 # Write to JSON file
