@@ -1,6 +1,6 @@
 {
     "amountOrderPickers": 10,
-    "capacity": 3,
+    "capacity": 5,
     "maxTimePerRound": 60,
     "amountOrders": 3,
     "amountWarehouses": 10,

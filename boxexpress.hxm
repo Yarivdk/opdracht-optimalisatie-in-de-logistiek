@@ -1,0 +1,166 @@
+use json;
+//test
+function input() {
+    data = json.parse(inFileName);
+    amountOrderPickers = data["amountOrderPickers"];
+    capacity = data["capacity"];
+    maxTimePerRound = data["maxTimePerRound"];
+    amountOrders = data["amountOrders"];
+    amountWarehouses = data["amountWarehouses"];
+    productLocations = data["productLocations"];
+    travelTimeMatrix = data["travelTimeMatrix"];
+    items = data["items"];
+    maxRoundsPerOrderPicker = data["maxRoundsPerOrderPicker"];
+
+    println(amountOrderPickers);
+    println(capacity);
+    println(maxTimePerRound);
+    println(amountOrders);
+    println(amountWarehouses);
+    println(productLocations[1]);
+    println(travelTimeMatrix[1][2]);
+    println(items);
+    println(maxRoundsPerOrderPicker);
+}
+
+function param() {
+    hxTimeLimit = 10;
+}
+
+function model() {
+    depotIndex = amountWarehouses; // convention: depot is the last index in travelTimeMatrix
+
+    // -------------------
+    // Decision variables
+    // -------------------
+
+    // assign[item][op][r] == 1 if item is assigned to order picker op on round r
+    assign[item in items][op in 0..amountOrderPickers-1][r in 0..maxRoundsPerOrderPicker-1] <- bool();
+
+    // visited[op][r][w] == 1 if route (op,r) visits warehouse w (w in 0..amountWarehouses-1)
+    visited[op in 0..amountOrderPickers-1][r in 0..maxRoundsPerOrderPicker-1][w in 0..amountWarehouses-1] <- bool();
+
+    // used order picker
+    usedOrderPickers[op in 0..amountOrderPickers-1] <- bool();
+
+    // route load (number of items assigned)
+    routeItems[op in 0..amountOrderPickers-1][r in 0..maxRoundsPerOrderPicker-1] <- int(0, capacity);
+
+    // routeTime estimated (conservative upper bound)
+    routeTime[op in 0..amountOrderPickers-1][r in 0..maxRoundsPerOrderPicker-1] <- float(0.0, maxTimePerRound);
+
+    // -------------------
+    // Constraints
+    // -------------------
+
+    // 1) Each item must be assigned to exactly one (op,r)
+    for [item in items] {
+        constraint sum[op in 0..amountOrderPickers-1][r in 0..maxRoundsPerOrderPicker-1](assign[item][op][r]) == 1;
+    }
+
+    // 2) If an item is assigned to (op,r) then that route must visit the item's warehouse
+    for [item in items] {
+        local w <- productLocations[item]; // must be 0..amountWarehouses-1
+        for [op in 0..amountOrderPickers-1] {
+            for [r in 0..maxRoundsPerOrderPicker-1] {
+                // assign[item][op][r] <= visited[op][r][w]
+                constraint assign[item][op][r] <= visited[op][r][w];
+            }
+        }
+    }
+
+    // 3) routeItems = total assigned items to that route and respect capacity
+    for [op in 0..amountOrderPickers-1] {
+        for [r in 0..maxRoundsPerOrderPicker-1] {
+            constraint routeItems[op][r] == sum[item in items](assign[item][op][r]);
+            constraint routeItems[op][r] <= capacity;
+        }
+    }
+
+    // 4) Link usedOrderPickers to assignments: if any item assigned to any round, used=1
+    for [op in 0..amountOrderPickers-1] {
+        // used[op] >= any assign for that op
+        for [r in 0..maxRoundsPerOrderPicker-1] {
+            for [item in items] {
+                constraint usedOrderPickers[op] >= assign[item][op][r];
+            }
+        }
+        // also, if any visited then used must be 1 (optional, redundant)
+        for [r in 0..maxRoundsPerOrderPicker-1] {
+            for [w in 0..amountWarehouses-1] {
+                constraint usedOrderPickers[op] >= visited[op][r][w];
+            }
+        }
+    }
+
+    // 5) Time upper bound per route: use conservative estimate (round-trip to each visited location)
+    for [op in 0..amountOrderPickers-1] {
+        for [r in 0..maxRoundsPerOrderPicker-1] {
+            // routeTime = sum_w visited * (depot->w + w->depot)
+            local timeSum <- sum[w in 0..amountWarehouses-1]( visited[op][r][w] * (travelTimeMatrix[depotIndex][w] + travelTimeMatrix[w][depotIndex]) );
+            constraint routeTime[op][r] == timeSum;
+        }
+        // Total per OP across rounds <= maxTimePerRound
+        constraint sum[r in 0..maxRoundsPerOrderPicker-1](routeTime[op][r]) <= maxTimePerRound;
+    }
+
+    // 7) Symmetry breaking: require usedOrderPickers nonincreasing (so OP0 >= OP1 >= OP2 ...)
+    for [op in 0..amountOrderPickers-2] {
+        constraint usedOrderPickers[op] >= usedOrderPickers[op+1];
+    }
+
+    // 8) Preference to fill earlier rounds: used rounds of an order picker should be nonincreasing
+    for [op in 0..amountOrderPickers-1] {
+        for [r in 0..maxRoundsPerOrderPicker-2] {
+            // if round r+1 used then round r must be used (i.e., visited something)
+            // We detect "round r used" by routeItems>0; use linear relation with a big-M
+            constraint routeItems[op][r] >= routeItems[op][r+1] - (capacity) * (1 - (routeItems[op][r] > 0)); 
+            // The line above is a non-standard convenience; if Hexaly rejects it, simpler:
+            constraint routeItems[op][r] >= routeItems[op][r+1];
+        }
+    }
+
+    // 9) Objective: minimize number of used order pickers
+    minimize sum[op in 0..amountOrderPickers-1](usedOrderPickers[op]);
+}
+
+function output() {
+    print("Order pickers used: ");
+    for [op in 0..amountOrderPickers-1] {
+        print(usedOrderPickers[op].value);
+    }
+    println("");
+    println("Assignments (item -> op,round):");
+    for [item in items] {
+        for [op in 0..amountOrderPickers-1] {
+            for [r in 0..maxRoundsPerOrderPicker-1] {
+                if (assign[item][op][r].value == 1) {
+                    println("item ", item, " -> OP", op, " R", r);
+                }
+            }
+        }
+    }
+    println("Visited warehouses per route:");
+    for [op in 0..amountOrderPickers-1] {
+        print("OP", op, ": ");
+        for [r in 0..maxRoundsPerOrderPicker-1] {
+            // print("OP", op, " R", r, ": ");
+            print("[");
+            for [w in 0..amountWarehouses-1] {
+                if (visited[op][r][w].value == 1) {
+                    print(w, " ");
+                }
+            }
+            print("]");
+        }
+        println("");
+    }
+    println("Route times (conservative estimate):");
+    for [op in 0..amountOrderPickers-1] {
+        print("OP", op, ": ");
+        for [r in 0..maxRoundsPerOrderPicker-1] {
+            print(routeTime[op][r].value, " ");
+        }
+        println("");
+    }
+}
