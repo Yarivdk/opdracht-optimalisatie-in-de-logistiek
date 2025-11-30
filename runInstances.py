@@ -19,7 +19,7 @@ for file in os.listdir(FOLDER):
         instance_results["param_value"] = int(instanceValue)
         results.append(instance_results)
         print(f"Results for {file}: {instance_results}")
-        break # Remove this break to run on all instances
+        # break # Remove this break to run on all instances
 
 
 with open("results.json", "w") as out:
