@@ -89,14 +89,14 @@ for scale in SCALES:
         
         # Build dictionary to write to JSON
         data = {
-            "amountOrderPickers": amountItems,
+            "amountOrderPickers": default_values["amount_items"],
             "capacity": default_values["capacity"],
             "maxTimePerRound": default_values["maxTimePerRound"],
-            "amountWarehouses": amountItems,
+            "amountWarehouses": default_values["amount_items"],
             "productLocations": productLocations,
             "travelTimeMatrix": travelTimeMatrix,
             "items": items,
-            "maxRoundsPerOrderPicker": amountItems
+            "maxRoundsPerOrderPicker": default_values["amount_items"]
         }
 
         # Write to JSON file

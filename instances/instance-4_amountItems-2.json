@@ -4,22 +4,22 @@
     "maxTimePerRound": 60,
     "amountWarehouses": 2,
     "productLocations": [
-        1,
-        0
+        0,
+        1
     ],
     "travelTimeMatrix": [
         [
             999,
-            10,
-            20
+            13,
+            19
         ],
         [
-            10,
+            19,
             999,
-            12
+            18
         ],
         [
-            14,
+            12,
             20,
             999
         ]
