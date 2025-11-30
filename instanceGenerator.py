@@ -12,7 +12,7 @@ default_values = {
     "capacity": 10,
     "maxTimePerRound": 60,
     "amount_items": 8,
-    "scale": "short",
+    "scale": "medium",
 }
 
 OUTPUT_FOLDER = "instances"
