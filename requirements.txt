@@ -1,0 +1,2 @@
+hexaly -i https://pip.hexaly.com
+pandas
