@@ -1,2 +1,2 @@
-hexaly -i https://pip.hexaly.com
+hexaly
 pandas
