@@ -1,12 +1,12 @@
 [
     {
-        "runtime": 1,
-        "iterations": 1153740,
-        "objective_value": 2,
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 3,
         "best_bound": 0,
-        "gap": 1.0,
-        "id": "10",
+        "gap": Infinity,
+        "id": "23",
         "type": "amountItems",
-        "value": "4"
+        "param_value": 32
     }
 ]
