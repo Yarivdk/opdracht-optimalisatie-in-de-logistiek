@@ -25,8 +25,6 @@ jobs:
         run: |
           pip install hexaly -i https://pip.hexaly.com
       
-            - name: Create Hexaly license file
-      
       - name: Create Hexaly license file
         run: |
           sudo mkdir -p /opt/hexaly_14_0
