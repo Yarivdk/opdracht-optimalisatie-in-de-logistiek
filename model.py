@@ -69,5 +69,8 @@ def run_model(input_file=None, timeLimit=60):
             "gap": gap
         }
 
+        optimizer.close()
+        modeler.close()
+
         return results
     
