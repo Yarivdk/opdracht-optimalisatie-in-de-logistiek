@@ -12,15 +12,15 @@ default_values = {
     "capacity": 10,
     "maxTimePerRound": 60,
     "amount_items": 8,
-    "scale": "medium",
+    "scale": "short",
 }
 
 OUTPUT_FOLDER = "instances"
 
 # Travel-time ranges
 TRAVEL_TIME_RANGES = {
-    "short": (1, 5),
-    "medium": (5, 30),
+    "short": (1, 10),
+    "medium": (10, 30),
     "long": (30, 60)
 }
 
