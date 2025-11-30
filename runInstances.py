@@ -1,6 +1,7 @@
 import os
 from model import run_model
 import json
+import time
 
 FOLDER = "instances"
 
@@ -19,6 +20,7 @@ for file in os.listdir(FOLDER):
         instance_results["param_value"] = int(instanceValue)
         results.append(instance_results)
         print(f"Results for {file}: {instance_results}")
+        time.sleep(2)
         # break # Remove this break to run on all instances
 
 
