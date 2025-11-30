@@ -17,7 +17,7 @@ for file in os.listdir(FOLDER):
         instance_results = run_model(input_file=filepath, timeLimit=60)
         instance_results["id"] = instanceID
         instance_results["type"] = instanceType
-        instance_results["param_value"] = int(instanceValue)
+        instance_results["param_value"] = instanceValue
         results.append(instance_results)
         print(f"Results for {file}: {instance_results}")
         time.sleep(2)
