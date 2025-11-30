@@ -13,14 +13,12 @@ for file in os.listdir(FOLDER):
         instanceType = file.split("-")[1].split("_")[1]
         instanceValue = file.split("-")[2].split(".")[0]
 
-        print(f"Running model for instance: {filepath}")
-        instance_results = run_model(input_file=filepath, timeLimit=10)
+        instance_results = run_model(input_file=filepath, timeLimit=60)
         instance_results["id"] = instanceID
         instance_results["type"] = instanceType
-        instance_results["value"] = int(instanceValue)
+        instance_results["param_value"] = int(instanceValue)
         results.append(instance_results)
         print(f"Results for {file}: {instance_results}")
-        break
 
 
 with open("results.json", "w") as out:

@@ -58,13 +58,6 @@ def run_model(input_file=None, timeLimit=60):
         gap = solution.get_objective_gap(0)
         bound = solution.get_objective_bound(0)
 
-        print("\n=== SOLVER STATISTICS ===")
-        print("Runtime (sec):", runtime)
-        print("Iterations:", iterations)
-        print("Best bound:", bound)
-        print("Best gap:", gap)
-        print("\nObjective (sum used order pickers):", obj_value)
-
         # --------------------------------------------------------------------
         # 7) SAVE RESULTS TO JSON
         # --------------------------------------------------------------------
