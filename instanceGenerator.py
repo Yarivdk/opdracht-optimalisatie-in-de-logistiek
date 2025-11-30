@@ -20,8 +20,8 @@ OUTPUT_FOLDER = "instances"
 # Travel-time ranges
 TRAVEL_TIME_RANGES = {
     "short": (1, 10),
-    "medium": (10, 30),
-    "long": (30, 60)
+    "medium": (10, 20),
+    "long": (20, 30)
 }
 
 counter = 1
