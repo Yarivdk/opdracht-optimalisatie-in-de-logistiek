@@ -5,7 +5,6 @@ function input() {
     amountOrderPickers = data["amountOrderPickers"];
     capacity = data["capacity"];
     maxTimePerRound = data["maxTimePerRound"];
-    amountOrders = data["amountOrders"];
     amountWarehouses = data["amountWarehouses"];
     productLocations = data["productLocations"];
     travelTimeMatrix = data["travelTimeMatrix"];
@@ -15,7 +14,6 @@ function input() {
     println(amountOrderPickers);
     println(capacity);
     println(maxTimePerRound);
-    println(amountOrders);
     println(amountWarehouses);
     println(productLocations[1]);
     println(travelTimeMatrix[1][2]);
@@ -23,104 +21,71 @@ function input() {
     println(maxRoundsPerOrderPicker);
 }
 
-function param() {
-    hxTimeLimit = 10;
-}
-
 function model() {
-    depotIndex = amountWarehouses; // convention: depot is the last index in travelTimeMatrix
-
-    // -------------------
     // Decision variables
-    // -------------------
+    route[op in 0..amountOrderPickers-1][r in 0..maxRoundsPerOrderPicker-1] <- list(amountWarehouses); // route r of order picker op
+    usedOrderPickers[op in 0..amountOrderPickers-1] <- bool(); // orderpicker op used or not
+    routeTime[op in 0..amountOrderPickers-1][r in 0..maxRoundsPerOrderPicker-1] <- float(0.0, maxTimePerRound); // travel time of route r of orderpicker op
+    routeItems[op in 0..amountOrderPickers-1][r in 0..maxRoundsPerOrderPicker-1] <- int(0, capacity); // amount of items in route r of orderpicker op
+    // routeUsed[op in 0..amountOrderPickers-1][r in 0..maxRoundsPerOrderPicker-1] <- bool();
 
-    // assign[item][op][r] == 1 if item is assigned to order picker op on round r
-    assign[item in items][op in 0..amountOrderPickers-1][r in 0..maxRoundsPerOrderPicker-1] <- bool();
+    // for [op in 0..amountOrderPickers-1] {
+    //     for [r in 0..maxRoundsPerOrderPicker-1] {
+    //         constraint routeUsed[op][r] >= (count(route[op][r]) > 0);
+    //     }
+    // }
 
-    // visited[op][r][w] == 1 if route (op,r) visits warehouse w (w in 0..amountWarehouses-1)
-    visited[op in 0..amountOrderPickers-1][r in 0..maxRoundsPerOrderPicker-1][w in 0..amountWarehouses-1] <- bool();
+    // each item has to be included in a route
+    // constraint partition[op in 0..amountOrderPickers-1][r in 0..maxRoundsPerOrderPicker-1](items,route[op][r]); 
+    // constraint partition(items, route); 
 
-    // used order picker
-    usedOrderPickers[op in 0..amountOrderPickers-1] <- bool();
 
-    // route load (number of items assigned)
-    routeItems[op in 0..amountOrderPickers-1][r in 0..maxRoundsPerOrderPicker-1] <- int(0, capacity);
-
-    // routeTime estimated (conservative upper bound)
-    routeTime[op in 0..amountOrderPickers-1][r in 0..maxRoundsPerOrderPicker-1] <- float(0.0, maxTimePerRound);
-
-    // -------------------
-    // Constraints
-    // -------------------
-
-    // 1) Each item must be assigned to exactly one (op,r)
     for [item in items] {
-        constraint sum[op in 0..amountOrderPickers-1][r in 0..maxRoundsPerOrderPicker-1](assign[item][op][r]) == 1;
-    }
-
-    // 2) If an item is assigned to (op,r) then that route must visit the item's warehouse
-    for [item in items] {
-        local w <- productLocations[item]; // must be 0..amountWarehouses-1
+        local itemLocation <- productLocations[item];
+        local itemCount <- 0;
         for [op in 0..amountOrderPickers-1] {
             for [r in 0..maxRoundsPerOrderPicker-1] {
-                // assign[item][op][r] <= visited[op][r][w]
-                constraint assign[item][op][r] <= visited[op][r][w];
+                local currentRoute <- route[op][r];
+                itemCount <- itemCount + (contains(currentRoute, itemLocation));
             }
         }
+        constraint itemCount == 1;
     }
 
-    // 3) routeItems = total assigned items to that route and respect capacity
+
+    // a route can only contain amount of items less than capacity
     for [op in 0..amountOrderPickers-1] {
         for [r in 0..maxRoundsPerOrderPicker-1] {
-            constraint routeItems[op][r] == sum[item in items](assign[item][op][r]);
+            routeItems[op][r] <- count(route[op][r]);
             constraint routeItems[op][r] <= capacity;
         }
     }
 
-    // 4) Link usedOrderPickers to assignments: if any item assigned to any round, used=1
-    for [op in 0..amountOrderPickers-1] {
-        // used[op] >= any assign for that op
-        for [r in 0..maxRoundsPerOrderPicker-1] {
-            for [item in items] {
-                constraint usedOrderPickers[op] >= assign[item][op][r];
-            }
-        }
-        // also, if any visited then used must be 1 (optional, redundant)
-        for [r in 0..maxRoundsPerOrderPicker-1] {
-            for [w in 0..amountWarehouses-1] {
-                constraint usedOrderPickers[op] >= visited[op][r][w];
-            }
-        }
-    }
+    // total route time has to be in time limit
 
-    // 5) Time upper bound per route: use conservative estimate (round-trip to each visited location)
     for [op in 0..amountOrderPickers-1] {
         for [r in 0..maxRoundsPerOrderPicker-1] {
-            // routeTime = sum_w visited * (depot->w + w->depot)
-            local timeSum <- sum[w in 0..amountWarehouses-1]( visited[op][r][w] * (travelTimeMatrix[depotIndex][w] + travelTimeMatrix[w][depotIndex]) );
-            constraint routeTime[op][r] == timeSum;
+            local currentRoute <- route[op][r];
+            local c <- count(currentRoute);
+
+            // Safe ternary indices to avoid empty route
+            local startIndex <- (c > 0) ? currentRoute[0] : amountWarehouses; 
+            local endIndex   <- (c > 0) ? currentRoute[c-1] : amountWarehouses;
+
+            local pathTime <- (c >= 2) ? sum(0..c-2, k=> travelTimeMatrix[currentRoute[k]][currentRoute[k+1]]) : 0;
+
+            routeTime[op][r] <- (c > 0) * (pathTime + travelTimeMatrix[amountWarehouses][startIndex] + travelTimeMatrix[endIndex][amountWarehouses]);
         }
-        // Total per OP across rounds <= maxTimePerRound
+
+        // Total time per order picker
         constraint sum[r in 0..maxRoundsPerOrderPicker-1](routeTime[op][r]) <= maxTimePerRound;
     }
 
-    // 7) Symmetry breaking: require usedOrderPickers nonincreasing (so OP0 >= OP1 >= OP2 ...)
-    for [op in 0..amountOrderPickers-2] {
-        constraint usedOrderPickers[op] >= usedOrderPickers[op+1];
-    }
-
-    // 8) Preference to fill earlier rounds: used rounds of an order picker should be nonincreasing
+    // Used order pickers are properly linked to their routes
     for [op in 0..amountOrderPickers-1] {
-        for [r in 0..maxRoundsPerOrderPicker-2] {
-            // if round r+1 used then round r must be used (i.e., visited something)
-            // We detect "round r used" by routeItems>0; use linear relation with a big-M
-            constraint routeItems[op][r] >= routeItems[op][r+1] - (capacity) * (1 - (routeItems[op][r] > 0)); 
-            // The line above is a non-standard convenience; if Hexaly rejects it, simpler:
-            constraint routeItems[op][r] >= routeItems[op][r+1];
-        }
+        constraint usedOrderPickers[op] == or[r in 0..maxRoundsPerOrderPicker-1](count(route[op][r]) > 0);
     }
 
-    // 9) Objective: minimize number of used order pickers
     minimize sum[op in 0..amountOrderPickers-1](usedOrderPickers[op]);
 }
 
@@ -130,32 +95,19 @@ function output() {
         print(usedOrderPickers[op].value);
     }
     println("");
-    println("Assignments (item -> op,round):");
-    for [item in items] {
-        for [op in 0..amountOrderPickers-1] {
-            for [r in 0..maxRoundsPerOrderPicker-1] {
-                if (assign[item][op][r].value == 1) {
-                    println("item ", item, " -> OP", op, " R", r);
-                }
-            }
-        }
-    }
-    println("Visited warehouses per route:");
+    println("Routes of the order pickers:");
     for [op in 0..amountOrderPickers-1] {
         print("OP", op, ": ");
         for [r in 0..maxRoundsPerOrderPicker-1] {
-            // print("OP", op, " R", r, ": ");
-            print("[");
-            for [w in 0..amountWarehouses-1] {
-                if (visited[op][r][w].value == 1) {
-                    print(w, " ");
-                }
-            }
-            print("]");
+            // local currentRoute <- route[op][r].value;
+            // print(currentRoute, " | ");
+            // local c <- route[op][r].value;
+            print(route[op][r].value);
         }
         println("");
     }
-    println("Route times (conservative estimate):");
+
+    println("Route Times of the order pickers:");
     for [op in 0..amountOrderPickers-1] {
         print("OP", op, ": ");
         for [r in 0..maxRoundsPerOrderPicker-1] {

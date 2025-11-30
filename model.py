@@ -1,62 +1,80 @@
 from hexaly.modeler import *
+from hexaly.optimizer import *
 import sys
 import json
 
-input_file = sys.argv[1]
+TIMESTAMPS_PER_SOLUTION = []
 
-with open(input_file, 'r') as f:
-    data = json.load(f)
+def run_model(input_file=None, timeLimit=60):
+    with open(input_file, 'r') as f:
+        data = json.load(f)
 
-with HexalyModeler() as modeler:
-    boxexpress_module = modeler.load_module("boxexpress", "boxexpress.hxm")
+    def my_callback(opt, cb_type):
+        global TIMESTAMPS_PER_SOLUTION
 
-    optimizer = modeler.create_optimizer()
-    boxexpress_module.run(optimizer, f"inFileName={input_file}")
-
-    # --------------------------------------------------------------------
-    # 1) GET SOLUTION + STATISTICS
-    # --------------------------------------------------------------------
-    usedOrderPickers = boxexpress_module["usedOrderPickers"]
-
-
-    solution = optimizer.get_solution()
-    stats = optimizer.get_statistics()
-    status = solution.get_status()
-
-    runtime = stats.get_running_time()
-    iterations = stats.get_nb_iterations()
-    gap = solution.get_objective_gap(0)
-    bound = solution.get_objective_bound(0)
+        stats = opt.statistics
+        obj = opt.model.objectives[0]
+        # e.g. log whenever objective improved
+        # print(f"EIGEN OUTPUT: [{stats.running_time} sec, {stats.nb_iterations} itr] obj = {obj.value}, status = {opt.solution.status}")
+        results = {
+            "time": stats.running_time,
+            "iterations": stats.nb_iterations,
+            "objective_value": obj.value,
+            "status": opt.solution.status.value
+        }
+        TIMESTAMPS_PER_SOLUTION.append(results)
 
 
-    print("\n=== SOLVER STATISTICS ===")
-    print("Runtime (sec):", runtime)
-    print("Iterations:", iterations)
-    print("Best bound:", bound)
-    print("Best gap:", gap)
+    with HexalyModeler() as modeler:
+        boxexpress_module = modeler.load_module("boxexpress", "boxexpress.hxm")
 
-    # --------------------------------------------------------------------
-    # 2) READ OBJECTIVE: usedOrderPickers
-    # --------------------------------------------------------------------
+        optimizer = modeler.create_optimizer()
+        # optimizer.param.iteration_between_ticks = 100
+        optimizer.add_callback(HxCallbackType.TIME_TICKED, my_callback)
+        boxexpress_module.run(optimizer, f"inFileName={input_file}", f"lsTimeLimit={timeLimit}")
+        print("CHECK:",TIMESTAMPS_PER_SOLUTION)
+        sorted_timestamps_per_solution = sorted(TIMESTAMPS_PER_SOLUTION, key=lambda x: x["iterations"])
 
-    obj_value = 0
-    for i in range(len(usedOrderPickers)):
-        obj_value += solution.get_value(usedOrderPickers[i])
+        # --------------------------------------------------------------------
+        # 1) GET SOLUTION + STATISTICS
+        # --------------------------------------------------------------------
+        usedOrderPickers = boxexpress_module["usedOrderPickers"]
+        solution = optimizer.get_solution()
 
-    print("\nObjective (sum used order pickers):", obj_value)
+        obj_value = 0
+        for i in range(len(usedOrderPickers)):
+            obj_value += solution.get_value(usedOrderPickers[i])
 
-    # --------------------------------------------------------------------
-    # 7) SAVE RESULTS TO JSON
-    # --------------------------------------------------------------------
-    results = {
-        "runtime": runtime,
-        "objective_value": obj_value,
-        "best_bound": bound,
-        "gap": gap
-    }
+        runtime = None
+        iterations = None
+        for result in sorted_timestamps_per_solution:
+            if result["status"] == 1:  # infeasible
+                continue
+            elif result["objective_value"] == obj_value:
+                runtime = result["time"]
+                iterations = result["iterations"]
+                break
 
-    with open("results.json", "w") as out:
-        json.dump(results, out, indent=4)
+        gap = solution.get_objective_gap(0)
+        bound = solution.get_objective_bound(0)
 
-    print("\nSaved → results.json")
+        print("\n=== SOLVER STATISTICS ===")
+        print("Runtime (sec):", runtime)
+        print("Iterations:", iterations)
+        print("Best bound:", bound)
+        print("Best gap:", gap)
+        print("\nObjective (sum used order pickers):", obj_value)
+
+        # --------------------------------------------------------------------
+        # 7) SAVE RESULTS TO JSON
+        # --------------------------------------------------------------------
+        results = {
+            "runtime": runtime,
+            "iterations": iterations,
+            "objective_value": obj_value,
+            "best_bound": bound,
+            "gap": gap
+        }
+
+        return results
     

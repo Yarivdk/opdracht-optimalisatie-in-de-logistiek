@@ -1,0 +1,32 @@
+{
+    "amountOrderPickers": 2,
+    "capacity": 10,
+    "maxTimePerRound": 60,
+    "amountWarehouses": 2,
+    "productLocations": [
+        0,
+        1
+    ],
+    "travelTimeMatrix": [
+        [
+            999,
+            16,
+            22
+        ],
+        [
+            13,
+            999,
+            8
+        ],
+        [
+            6,
+            24,
+            999
+        ]
+    ],
+    "items": [
+        0,
+        1
+    ],
+    "maxRoundsPerOrderPicker": 2
+}
