@@ -1,0 +1,12 @@
+[
+    {
+        "runtime": 1,
+        "iterations": 28512,
+        "objective_value": 1,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "1",
+        "type": "amountItems",
+        "param_value": "2"
+    }
+]
