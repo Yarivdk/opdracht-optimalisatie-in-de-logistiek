@@ -4,7 +4,8 @@ import random
 
 INSTANCES_PER_CONFIGURATION = 5
 
-ITEMS_SET = [2, 4, 8, 16, 25, 32, 40, 45, 50, 55, 60, 64, 75, 80, 85, 90, 95, 100, 128, 150, 175, 200, 256, 500]
+# krijg een warning bij instance size van 150 (teveel operands)
+ITEMS_SET = range(5, 130, 5)
 # CAPACITY_SET = [3, 5, 8, 10, 13, 15]
 SCALES = ["short", "medium", "long"]
 

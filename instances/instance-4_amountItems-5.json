@@ -1,0 +1,71 @@
+{
+    "amountOrderPickers": 5,
+    "capacity": 10,
+    "maxTimePerRound": 60,
+    "amountWarehouses": 5,
+    "productLocations": [
+        4,
+        3,
+        2,
+        1,
+        0
+    ],
+    "travelTimeMatrix": [
+        [
+            999,
+            1,
+            8,
+            7,
+            6,
+            9
+        ],
+        [
+            9,
+            999,
+            8,
+            4,
+            4,
+            5
+        ],
+        [
+            9,
+            6,
+            999,
+            5,
+            4,
+            8
+        ],
+        [
+            6,
+            9,
+            1,
+            999,
+            8,
+            4
+        ],
+        [
+            8,
+            7,
+            1,
+            1,
+            999,
+            10
+        ],
+        [
+            7,
+            10,
+            6,
+            8,
+            10,
+            999
+        ]
+    ],
+    "items": [
+        0,
+        1,
+        2,
+        3,
+        4
+    ],
+    "maxRoundsPerOrderPicker": 5
+}
