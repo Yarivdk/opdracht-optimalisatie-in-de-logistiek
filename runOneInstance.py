@@ -18,7 +18,7 @@ instance_results["param_value"] = instanceValue
 results.append(instance_results)
 print(f"Results for {INSTANCE_FILE}: {instance_results}")
 
-with open(f"results_instance{instanceID}.json", "w") as out:
+with open(f"results_individual_instance.json", "w") as out:
     json.dump(results, out, indent=4)
 
-print(f"\nSaved → results_instance{instanceID}.json")
+print(f"\nSaved → results_individual_instance.json")
