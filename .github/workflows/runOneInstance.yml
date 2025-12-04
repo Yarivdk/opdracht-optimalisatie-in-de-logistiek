@@ -6,7 +6,7 @@ on:
       instance_file:
         description: 'Instance file to run (e.g., instances/instance-1_amountItems-2.json)'
         required: true
-        default: 'instances/instance-1_amountItems-2.json.json'
+        default: 'instances/instance-1_amountItems-2.json'
         type: string
 
 jobs:
