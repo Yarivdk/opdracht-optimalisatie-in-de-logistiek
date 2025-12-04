@@ -1,0 +1,452 @@
+[
+    {
+        "runtime": 1,
+        "iterations": 777029,
+        "objective_value": 14,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "23",
+        "type": "amountItems",
+        "param_value": "32"
+    },
+    {
+        "runtime": 6,
+        "iterations": 1371629,
+        "objective_value": 25,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "26",
+        "type": "amountItems",
+        "param_value": "64"
+    },
+    {
+        "runtime": 1,
+        "iterations": 796182,
+        "objective_value": 1,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "8",
+        "type": "amountItems",
+        "param_value": "4"
+    },
+    {
+        "runtime": 1,
+        "iterations": 245946,
+        "objective_value": 1,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "6",
+        "type": "amountItems",
+        "param_value": "4"
+    },
+    {
+        "runtime": 1,
+        "iterations": 209435,
+        "objective_value": 1,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "10",
+        "type": "amountItems",
+        "param_value": "4"
+    },
+    {
+        "runtime": 1,
+        "iterations": 424936,
+        "objective_value": 1,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "3",
+        "type": "amountItems",
+        "param_value": "2"
+    },
+    {
+        "runtime": 1,
+        "iterations": 858713,
+        "objective_value": 3,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "36",
+        "type": "travelTimes",
+        "param_value": "medium"
+    },
+    {
+        "runtime": 1,
+        "iterations": 58705,
+        "objective_value": 1,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "35",
+        "type": "travelTimes",
+        "param_value": "short"
+    },
+    {
+        "runtime": 7,
+        "iterations": 7943814,
+        "objective_value": 3,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "38",
+        "type": "travelTimes",
+        "param_value": "medium"
+    },
+    {
+        "runtime": 1,
+        "iterations": 267810,
+        "objective_value": 1,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "1",
+        "type": "amountItems",
+        "param_value": "2"
+    },
+    {
+        "runtime": 1,
+        "iterations": 2195073,
+        "objective_value": 1,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "5",
+        "type": "amountItems",
+        "param_value": "2"
+    },
+    {
+        "runtime": 1,
+        "iterations": 71120,
+        "objective_value": 3,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "34",
+        "type": "travelTimes",
+        "param_value": "short"
+    },
+    {
+        "runtime": 6,
+        "iterations": 5948927,
+        "objective_value": 4,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "40",
+        "type": "travelTimes",
+        "param_value": "medium"
+    },
+    {
+        "runtime": 1,
+        "iterations": 212112,
+        "objective_value": 3,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "14",
+        "type": "amountItems",
+        "param_value": "8"
+    },
+    {
+        "runtime": 1,
+        "iterations": 210293,
+        "objective_value": 1,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "13",
+        "type": "amountItems",
+        "param_value": "8"
+    },
+    {
+        "runtime": 1,
+        "iterations": 68673,
+        "objective_value": 1,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "15",
+        "type": "amountItems",
+        "param_value": "8"
+    },
+    {
+        "runtime": 23,
+        "iterations": 33550141,
+        "objective_value": 2,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "19",
+        "type": "amountItems",
+        "param_value": "16"
+    },
+    {
+        "runtime": 1,
+        "iterations": 1605562,
+        "objective_value": 4,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "18",
+        "type": "amountItems",
+        "param_value": "16"
+    },
+    {
+        "runtime": 1,
+        "iterations": 372114,
+        "objective_value": 1,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "2",
+        "type": "amountItems",
+        "param_value": "2"
+    },
+    {
+        "runtime": 2,
+        "iterations": 1817903,
+        "objective_value": 5,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "37",
+        "type": "travelTimes",
+        "param_value": "medium"
+    },
+    {
+        "runtime": 1,
+        "iterations": 223470,
+        "objective_value": 9,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "21",
+        "type": "amountItems",
+        "param_value": "32"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 5,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "24",
+        "type": "amountItems",
+        "param_value": "32"
+    },
+    {
+        "runtime": 2,
+        "iterations": 2009276,
+        "objective_value": 1,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "9",
+        "type": "amountItems",
+        "param_value": "4"
+    },
+    {
+        "runtime": 4,
+        "iterations": 2120871,
+        "objective_value": 4,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "39",
+        "type": "travelTimes",
+        "param_value": "medium"
+    },
+    {
+        "runtime": 1,
+        "iterations": 1503419,
+        "objective_value": 5,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "20",
+        "type": "amountItems",
+        "param_value": "16"
+    },
+    {
+        "runtime": 1,
+        "iterations": 288812,
+        "objective_value": 12,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "22",
+        "type": "amountItems",
+        "param_value": "32"
+    },
+    {
+        "runtime": 1,
+        "iterations": 376315,
+        "objective_value": 8,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "25",
+        "type": "amountItems",
+        "param_value": "32"
+    },
+    {
+        "runtime": 1,
+        "iterations": 68725,
+        "objective_value": 2,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "32",
+        "type": "travelTimes",
+        "param_value": "short"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 13,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "28",
+        "type": "amountItems",
+        "param_value": "64"
+    },
+    {
+        "runtime": 1,
+        "iterations": 945237,
+        "objective_value": 1,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "7",
+        "type": "amountItems",
+        "param_value": "4"
+    },
+    {
+        "runtime": 1,
+        "iterations": 1493007,
+        "objective_value": 3,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "12",
+        "type": "amountItems",
+        "param_value": "8"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 7,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "41",
+        "type": "travelTimes",
+        "param_value": "long"
+    },
+    {
+        "runtime": 1,
+        "iterations": 316656,
+        "objective_value": 1,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "4",
+        "type": "amountItems",
+        "param_value": "2"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 3,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "44",
+        "type": "travelTimes",
+        "param_value": "long"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 7,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "42",
+        "type": "travelTimes",
+        "param_value": "long"
+    },
+    {
+        "runtime": 1,
+        "iterations": 33135,
+        "objective_value": 1,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "31",
+        "type": "travelTimes",
+        "param_value": "short"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 2,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "43",
+        "type": "travelTimes",
+        "param_value": "long"
+    },
+    {
+        "runtime": 1,
+        "iterations": 213075,
+        "objective_value": 3,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "11",
+        "type": "amountItems",
+        "param_value": "8"
+    },
+    {
+        "runtime": 1,
+        "iterations": 424941,
+        "objective_value": 26,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "30",
+        "type": "amountItems",
+        "param_value": "64"
+    },
+    {
+        "runtime": 43,
+        "iterations": 63410505,
+        "objective_value": 4,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "17",
+        "type": "amountItems",
+        "param_value": "16"
+    },
+    {
+        "runtime": 1,
+        "iterations": 555044,
+        "objective_value": 22,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "27",
+        "type": "amountItems",
+        "param_value": "64"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 11,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "29",
+        "type": "amountItems",
+        "param_value": "64"
+    },
+    {
+        "runtime": 1,
+        "iterations": 398418,
+        "objective_value": 2,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "33",
+        "type": "travelTimes",
+        "param_value": "short"
+    },
+    {
+        "runtime": 17,
+        "iterations": 8815192,
+        "objective_value": 8,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "45",
+        "type": "travelTimes",
+        "param_value": "long"
+    },
+    {
+        "runtime": 3,
+        "iterations": 4740230,
+        "objective_value": 5,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "16",
+        "type": "amountItems",
+        "param_value": "16"
+    }
+]
