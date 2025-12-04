@@ -2,6 +2,7 @@ import os
 from model import run_model
 import json
 import time
+from datetime import datetime
 
 FOLDER = "instances"
 
@@ -23,8 +24,8 @@ for file in os.listdir(FOLDER):
         time.sleep(2)
         # break # Remove this break to run on all instances
 
-
-with open("results.json", "w") as out:
+timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+with open(f"results/results_{timestamp}.json", "w") as out:
     json.dump(results, out, indent=4)
 
-print("\nSaved → results.json")
+print(f"\nSaved → results/results_{timestamp}.json")

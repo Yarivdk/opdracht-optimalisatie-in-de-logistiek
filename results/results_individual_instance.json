@@ -1,0 +1,12 @@
+[
+    {
+        "runtime": 6,
+        "iterations": 7554580,
+        "objective_value": 3,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "38",
+        "type": "travelTimes",
+        "param_value": "medium"
+    }
+]

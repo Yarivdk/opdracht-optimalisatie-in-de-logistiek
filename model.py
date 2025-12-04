@@ -3,15 +3,12 @@ from hexaly.optimizer import *
 import sys
 import json
 
-TIMESTAMPS_PER_SOLUTION = []
-
 def run_model(input_file=None, timeLimit=60):
+    TIMESTAMPS_PER_SOLUTION = []
     with open(input_file, 'r') as f:
         data = json.load(f)
 
     def my_callback(opt, cb_type):
-        global TIMESTAMPS_PER_SOLUTION
-
         stats = opt.statistics
         obj = opt.model.objectives[0]
         # e.g. log whenever objective improved
@@ -32,7 +29,7 @@ def run_model(input_file=None, timeLimit=60):
         # optimizer.param.iteration_between_ticks = 100
         optimizer.add_callback(HxCallbackType.TIME_TICKED, my_callback)
         boxexpress_module.run(optimizer, f"inFileName={input_file}", f"lsTimeLimit={timeLimit}")
-        print("CHECK:",TIMESTAMPS_PER_SOLUTION)
+        # print("CHECK:",TIMESTAMPS_PER_SOLUTION)
         sorted_timestamps_per_solution = sorted(TIMESTAMPS_PER_SOLUTION, key=lambda x: x["iterations"])
 
         # --------------------------------------------------------------------

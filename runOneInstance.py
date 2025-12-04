@@ -1,7 +1,7 @@
 from model import run_model
 import json
 import sys
-
+from datetime import datetime
 INSTANCE_FILE = sys.argv[1]
 
 results = []
@@ -18,7 +18,9 @@ instance_results["param_value"] = instanceValue
 results.append(instance_results)
 print(f"Results for {INSTANCE_FILE}: {instance_results}")
 
-with open(f"results_individual_instance.json", "w") as out:
+timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+
+with open(f"results/results_individual_instance_{timestamp}.json", "w") as out:
     json.dump(results, out, indent=4)
 
-print(f"\nSaved → results_individual_instance.json")
+print(f"\nSaved → results/results_individual_instance_{timestamp}.json")
