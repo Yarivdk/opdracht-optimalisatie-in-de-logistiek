@@ -15,7 +15,7 @@ for file in os.listdir(FOLDER):
         instanceType = file.split("-")[1].split("_")[1]
         instanceValue = file.split("-")[2].split(".")[0]
 
-        instance_results = run_model(input_file=filepath, timeLimit=60)
+        instance_results = run_model(input_file=filepath, timeLimit=120)
         instance_results["id"] = instanceID
         instance_results["type"] = instanceType
         instance_results["param_value"] = instanceValue
