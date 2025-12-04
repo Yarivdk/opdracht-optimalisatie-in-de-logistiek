@@ -1,0 +1,45 @@
+name: Generate instances
+
+on:
+  workflow_dispatch:
+
+jobs:
+  generate-instances:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write     # REQUIRED to push back to the repo
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0    # needed so git can push
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Run script
+        run: python generateInstances.py
+        # change to your actual script name
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+
+          git pull origin main
+          git add -A
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Update from GitHub Actions, instances generated"
+            git push
+          fi
