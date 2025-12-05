@@ -9,7 +9,7 @@ import pandas as pd
 # ---------------------------
 # Load your JSON file
 # ---------------------------
-with open("results.json", "r") as f:
+with open("results/results_2025-12-05_03-58-03.json", "r") as f:
     data = json.load(f)
 
 df = pd.DataFrame(data)
