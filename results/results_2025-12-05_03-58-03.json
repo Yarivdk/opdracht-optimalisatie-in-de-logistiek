@@ -1,0 +1,1402 @@
+[
+    {
+        "runtime": 1,
+        "iterations": 577489,
+        "objective_value": 7,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "27",
+        "type": "amountItems",
+        "param_value": "30"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 17,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "121",
+        "type": "amountItems",
+        "param_value": "125"
+    },
+    {
+        "runtime": 4,
+        "iterations": 692147,
+        "objective_value": 12,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "38",
+        "type": "amountItems",
+        "param_value": "40"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 18,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "81",
+        "type": "amountItems",
+        "param_value": "85"
+    },
+    {
+        "runtime": 2,
+        "iterations": 1473767,
+        "objective_value": 4,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "135",
+        "type": "travelTimes",
+        "param_value": "medium"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 14,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "68",
+        "type": "amountItems",
+        "param_value": "70"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 22,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "76",
+        "type": "amountItems",
+        "param_value": "80"
+    },
+    {
+        "runtime": 1,
+        "iterations": 218745,
+        "objective_value": 25,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "59",
+        "type": "amountItems",
+        "param_value": "60"
+    },
+    {
+        "runtime": 1,
+        "iterations": 710055,
+        "objective_value": 9,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "25",
+        "type": "amountItems",
+        "param_value": "25"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 23,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "120",
+        "type": "amountItems",
+        "param_value": "120"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 32,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "109",
+        "type": "amountItems",
+        "param_value": "110"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 28,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "90",
+        "type": "amountItems",
+        "param_value": "90"
+    },
+    {
+        "runtime": 1,
+        "iterations": 993937,
+        "objective_value": 4,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "13",
+        "type": "amountItems",
+        "param_value": "15"
+    },
+    {
+        "runtime": 4,
+        "iterations": 2809010,
+        "objective_value": 5,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "132",
+        "type": "travelTimes",
+        "param_value": "medium"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 22,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "106",
+        "type": "amountItems",
+        "param_value": "110"
+    },
+    {
+        "runtime": 45,
+        "iterations": 4256943,
+        "objective_value": 58,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "99",
+        "type": "amountItems",
+        "param_value": "100"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 10,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "50",
+        "type": "amountItems",
+        "param_value": "50"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 18,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "82",
+        "type": "amountItems",
+        "param_value": "85"
+    },
+    {
+        "runtime": 1,
+        "iterations": 1348234,
+        "objective_value": 21,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "34",
+        "type": "amountItems",
+        "param_value": "35"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 21,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "85",
+        "type": "amountItems",
+        "param_value": "85"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 7,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "139",
+        "type": "travelTimes",
+        "param_value": "long"
+    },
+    {
+        "runtime": 1,
+        "iterations": 106316,
+        "objective_value": 11,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "36",
+        "type": "amountItems",
+        "param_value": "40"
+    },
+    {
+        "runtime": 1,
+        "iterations": 49912,
+        "objective_value": 18,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "56",
+        "type": "amountItems",
+        "param_value": "60"
+    },
+    {
+        "runtime": 1,
+        "iterations": 612512,
+        "objective_value": 5,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "16",
+        "type": "amountItems",
+        "param_value": "20"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 20,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "111",
+        "type": "amountItems",
+        "param_value": "115"
+    },
+    {
+        "runtime": 1,
+        "iterations": 1480503,
+        "objective_value": 8,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "32",
+        "type": "amountItems",
+        "param_value": "35"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 20,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "123",
+        "type": "amountItems",
+        "param_value": "125"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 13,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "80",
+        "type": "amountItems",
+        "param_value": "80"
+    },
+    {
+        "runtime": 8,
+        "iterations": 7816364,
+        "objective_value": 4,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "131",
+        "type": "travelTimes",
+        "param_value": "medium"
+    },
+    {
+        "runtime": 12,
+        "iterations": 16655918,
+        "objective_value": 2,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "20",
+        "type": "amountItems",
+        "param_value": "20"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 11,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "112",
+        "type": "amountItems",
+        "param_value": "115"
+    },
+    {
+        "runtime": 1,
+        "iterations": 190467,
+        "objective_value": 20,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "51",
+        "type": "amountItems",
+        "param_value": "55"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 10,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "62",
+        "type": "amountItems",
+        "param_value": "65"
+    },
+    {
+        "runtime": 5,
+        "iterations": 1149999,
+        "objective_value": 28,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "88",
+        "type": "amountItems",
+        "param_value": "90"
+    },
+    {
+        "runtime": 2,
+        "iterations": 2590306,
+        "objective_value": 8,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "23",
+        "type": "amountItems",
+        "param_value": "25"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 1,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "137",
+        "type": "travelTimes",
+        "param_value": "long"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 40,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "113",
+        "type": "amountItems",
+        "param_value": "115"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 14,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "84",
+        "type": "amountItems",
+        "param_value": "85"
+    },
+    {
+        "runtime": 1,
+        "iterations": 31176,
+        "objective_value": 1,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "126",
+        "type": "travelTimes",
+        "param_value": "short"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 35,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "100",
+        "type": "amountItems",
+        "param_value": "100"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 7,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "140",
+        "type": "travelTimes",
+        "param_value": "long"
+    },
+    {
+        "runtime": 1,
+        "iterations": 201592,
+        "objective_value": 14,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "39",
+        "type": "amountItems",
+        "param_value": "40"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 22,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "96",
+        "type": "amountItems",
+        "param_value": "100"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 24,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "101",
+        "type": "amountItems",
+        "param_value": "105"
+    },
+    {
+        "runtime": 1,
+        "iterations": 174797,
+        "objective_value": 21,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "55",
+        "type": "amountItems",
+        "param_value": "55"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 25,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "102",
+        "type": "amountItems",
+        "param_value": "105"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 19,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "74",
+        "type": "amountItems",
+        "param_value": "75"
+    },
+    {
+        "runtime": 1,
+        "iterations": 925560,
+        "objective_value": 1,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "129",
+        "type": "travelTimes",
+        "param_value": "short"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 6,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "49",
+        "type": "amountItems",
+        "param_value": "50"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 31,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "114",
+        "type": "amountItems",
+        "param_value": "115"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 32,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "118",
+        "type": "amountItems",
+        "param_value": "120"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 11,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "58",
+        "type": "amountItems",
+        "param_value": "60"
+    },
+    {
+        "runtime": 1,
+        "iterations": 578974,
+        "objective_value": 9,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "29",
+        "type": "amountItems",
+        "param_value": "30"
+    },
+    {
+        "runtime": 1,
+        "iterations": 613149,
+        "objective_value": 4,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "9",
+        "type": "amountItems",
+        "param_value": "10"
+    },
+    {
+        "runtime": 3,
+        "iterations": 1304277,
+        "objective_value": 6,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "24",
+        "type": "amountItems",
+        "param_value": "25"
+    },
+    {
+        "runtime": 1,
+        "iterations": 279838,
+        "objective_value": 8,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "35",
+        "type": "amountItems",
+        "param_value": "35"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 54,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "124",
+        "type": "amountItems",
+        "param_value": "125"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 12,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "41",
+        "type": "amountItems",
+        "param_value": "45"
+    },
+    {
+        "runtime": 2,
+        "iterations": 2430661,
+        "objective_value": 4,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "12",
+        "type": "amountItems",
+        "param_value": "15"
+    },
+    {
+        "runtime": 1,
+        "iterations": 14301,
+        "objective_value": 2,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "6",
+        "type": "amountItems",
+        "param_value": "10"
+    },
+    {
+        "runtime": 1,
+        "iterations": 704950,
+        "objective_value": 1,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "3",
+        "type": "amountItems",
+        "param_value": "5"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 6,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "37",
+        "type": "amountItems",
+        "param_value": "40"
+    },
+    {
+        "runtime": 1,
+        "iterations": 221991,
+        "objective_value": 4,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "22",
+        "type": "amountItems",
+        "param_value": "25"
+    },
+    {
+        "runtime": 3,
+        "iterations": 635307,
+        "objective_value": 32,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "83",
+        "type": "amountItems",
+        "param_value": "85"
+    },
+    {
+        "runtime": 22,
+        "iterations": 7823094,
+        "objective_value": 23,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "67",
+        "type": "amountItems",
+        "param_value": "70"
+    },
+    {
+        "runtime": 4,
+        "iterations": 781629,
+        "objective_value": 16,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "46",
+        "type": "amountItems",
+        "param_value": "50"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 19,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "119",
+        "type": "amountItems",
+        "param_value": "120"
+    },
+    {
+        "runtime": 3,
+        "iterations": 975378,
+        "objective_value": 7,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "30",
+        "type": "amountItems",
+        "param_value": "30"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 11,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "45",
+        "type": "amountItems",
+        "param_value": "45"
+    },
+    {
+        "runtime": 1,
+        "iterations": 217232,
+        "objective_value": 45,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "107",
+        "type": "amountItems",
+        "param_value": "110"
+    },
+    {
+        "runtime": 1,
+        "iterations": 212957,
+        "objective_value": 5,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "8",
+        "type": "amountItems",
+        "param_value": "10"
+    },
+    {
+        "runtime": 1,
+        "iterations": 157759,
+        "objective_value": 37,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "94",
+        "type": "amountItems",
+        "param_value": "95"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 35,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "115",
+        "type": "amountItems",
+        "param_value": "115"
+    },
+    {
+        "runtime": 1,
+        "iterations": 1553099,
+        "objective_value": 2,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "127",
+        "type": "travelTimes",
+        "param_value": "short"
+    },
+    {
+        "runtime": 9,
+        "iterations": 1192484,
+        "objective_value": 22,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "57",
+        "type": "amountItems",
+        "param_value": "60"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 19,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "95",
+        "type": "amountItems",
+        "param_value": "95"
+    },
+    {
+        "runtime": 10,
+        "iterations": 10098747,
+        "objective_value": 3,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "134",
+        "type": "travelTimes",
+        "param_value": "medium"
+    },
+    {
+        "runtime": 1,
+        "iterations": 502088,
+        "objective_value": 9,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "33",
+        "type": "amountItems",
+        "param_value": "35"
+    },
+    {
+        "runtime": 2,
+        "iterations": 2525433,
+        "objective_value": 1,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "5",
+        "type": "amountItems",
+        "param_value": "5"
+    },
+    {
+        "runtime": 23,
+        "iterations": 15295315,
+        "objective_value": 24,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "64",
+        "type": "amountItems",
+        "param_value": "65"
+    },
+    {
+        "runtime": 1,
+        "iterations": 1362109,
+        "objective_value": 6,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "19",
+        "type": "amountItems",
+        "param_value": "20"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 25,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "103",
+        "type": "amountItems",
+        "param_value": "105"
+    },
+    {
+        "runtime": 1,
+        "iterations": 220229,
+        "objective_value": 14,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "31",
+        "type": "amountItems",
+        "param_value": "35"
+    },
+    {
+        "runtime": 1,
+        "iterations": 446034,
+        "objective_value": 16,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "42",
+        "type": "amountItems",
+        "param_value": "45"
+    },
+    {
+        "runtime": 1,
+        "iterations": 1279051,
+        "objective_value": 10,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "26",
+        "type": "amountItems",
+        "param_value": "30"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 19,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "73",
+        "type": "amountItems",
+        "param_value": "75"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 35,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "110",
+        "type": "amountItems",
+        "param_value": "110"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 16,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "77",
+        "type": "amountItems",
+        "param_value": "80"
+    },
+    {
+        "runtime": 1,
+        "iterations": 28047,
+        "objective_value": 15,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "48",
+        "type": "amountItems",
+        "param_value": "50"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 16,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "54",
+        "type": "amountItems",
+        "param_value": "55"
+    },
+    {
+        "runtime": 1,
+        "iterations": 719650,
+        "objective_value": 1,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "2",
+        "type": "amountItems",
+        "param_value": "5"
+    },
+    {
+        "runtime": 2,
+        "iterations": 1549135,
+        "objective_value": 5,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "21",
+        "type": "amountItems",
+        "param_value": "25"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 11,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "63",
+        "type": "amountItems",
+        "param_value": "65"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 26,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "98",
+        "type": "amountItems",
+        "param_value": "100"
+    },
+    {
+        "runtime": 1,
+        "iterations": 1147999,
+        "objective_value": 2,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "130",
+        "type": "travelTimes",
+        "param_value": "short"
+    },
+    {
+        "runtime": 5,
+        "iterations": 948955,
+        "objective_value": 31,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "78",
+        "type": "amountItems",
+        "param_value": "80"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 37,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "92",
+        "type": "amountItems",
+        "param_value": "95"
+    },
+    {
+        "runtime": 1,
+        "iterations": 1172367,
+        "objective_value": 1,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "7",
+        "type": "amountItems",
+        "param_value": "10"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 30,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "116",
+        "type": "amountItems",
+        "param_value": "120"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 25,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "97",
+        "type": "amountItems",
+        "param_value": "100"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 18,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "86",
+        "type": "amountItems",
+        "param_value": "90"
+    },
+    {
+        "runtime": 1,
+        "iterations": 175740,
+        "objective_value": 17,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "53",
+        "type": "amountItems",
+        "param_value": "55"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 14,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "122",
+        "type": "amountItems",
+        "param_value": "125"
+    },
+    {
+        "runtime": 4,
+        "iterations": 1582342,
+        "objective_value": 13,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "44",
+        "type": "amountItems",
+        "param_value": "45"
+    },
+    {
+        "runtime": 1,
+        "iterations": 474758,
+        "objective_value": 2,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "10",
+        "type": "amountItems",
+        "param_value": "10"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 38,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "117",
+        "type": "amountItems",
+        "param_value": "120"
+    },
+    {
+        "runtime": 1,
+        "iterations": 1453707,
+        "objective_value": 2,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "15",
+        "type": "amountItems",
+        "param_value": "15"
+    },
+    {
+        "runtime": 7,
+        "iterations": 11057490,
+        "objective_value": 5,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "11",
+        "type": "amountItems",
+        "param_value": "15"
+    },
+    {
+        "runtime": 95,
+        "iterations": 12621569,
+        "objective_value": 34,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "60",
+        "type": "amountItems",
+        "param_value": "60"
+    },
+    {
+        "runtime": 1,
+        "iterations": 461857,
+        "objective_value": 2,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "128",
+        "type": "travelTimes",
+        "param_value": "short"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 14,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "66",
+        "type": "amountItems",
+        "param_value": "70"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 21,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "72",
+        "type": "amountItems",
+        "param_value": "75"
+    },
+    {
+        "runtime": 1,
+        "iterations": 8001,
+        "objective_value": 1,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "1",
+        "type": "amountItems",
+        "param_value": "5"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 26,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "93",
+        "type": "amountItems",
+        "param_value": "95"
+    },
+    {
+        "runtime": 1,
+        "iterations": 704146,
+        "objective_value": 4,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "133",
+        "type": "travelTimes",
+        "param_value": "medium"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 28,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "87",
+        "type": "amountItems",
+        "param_value": "90"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 36,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "91",
+        "type": "amountItems",
+        "param_value": "95"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 18,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "70",
+        "type": "amountItems",
+        "param_value": "70"
+    },
+    {
+        "runtime": 1,
+        "iterations": 1007548,
+        "objective_value": 6,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "17",
+        "type": "amountItems",
+        "param_value": "20"
+    },
+    {
+        "runtime": 55,
+        "iterations": 92956494,
+        "objective_value": 4,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "18",
+        "type": "amountItems",
+        "param_value": "20"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 41,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "108",
+        "type": "amountItems",
+        "param_value": "110"
+    },
+    {
+        "runtime": 1,
+        "iterations": 171903,
+        "objective_value": 10,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "40",
+        "type": "amountItems",
+        "param_value": "40"
+    },
+    {
+        "runtime": 2,
+        "iterations": 1455760,
+        "objective_value": 5,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "14",
+        "type": "amountItems",
+        "param_value": "15"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 15,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "69",
+        "type": "amountItems",
+        "param_value": "70"
+    },
+    {
+        "runtime": 1,
+        "iterations": 232526,
+        "objective_value": 12,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "28",
+        "type": "amountItems",
+        "param_value": "30"
+    },
+    {
+        "runtime": 17,
+        "iterations": 3139831,
+        "objective_value": 18,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "47",
+        "type": "amountItems",
+        "param_value": "50"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 17,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "105",
+        "type": "amountItems",
+        "param_value": "105"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 20,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "65",
+        "type": "amountItems",
+        "param_value": "65"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 12,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "89",
+        "type": "amountItems",
+        "param_value": "90"
+    },
+    {
+        "runtime": 10,
+        "iterations": 1158347,
+        "objective_value": 27,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "71",
+        "type": "amountItems",
+        "param_value": "75"
+    },
+    {
+        "runtime": 1,
+        "iterations": 66492,
+        "objective_value": 28,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "75",
+        "type": "amountItems",
+        "param_value": "75"
+    },
+    {
+        "runtime": 1,
+        "iterations": 212881,
+        "objective_value": 16,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "43",
+        "type": "amountItems",
+        "param_value": "45"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 41,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "104",
+        "type": "amountItems",
+        "param_value": "105"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 30,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "79",
+        "type": "amountItems",
+        "param_value": "80"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 7,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "136",
+        "type": "travelTimes",
+        "param_value": "long"
+    },
+    {
+        "runtime": 4,
+        "iterations": 861080,
+        "objective_value": 30,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "61",
+        "type": "amountItems",
+        "param_value": "65"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 7,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "138",
+        "type": "travelTimes",
+        "param_value": "long"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 57,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "125",
+        "type": "amountItems",
+        "param_value": "125"
+    },
+    {
+        "runtime": null,
+        "iterations": null,
+        "objective_value": 20,
+        "best_bound": 0,
+        "gap": Infinity,
+        "id": "52",
+        "type": "amountItems",
+        "param_value": "55"
+    },
+    {
+        "runtime": 1,
+        "iterations": 427411,
+        "objective_value": 1,
+        "best_bound": 0,
+        "gap": 1.0,
+        "id": "4",
+        "type": "amountItems",
+        "param_value": "5"
+    }
+]
