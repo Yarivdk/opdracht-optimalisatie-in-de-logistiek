@@ -1,10 +1,16 @@
-name: Run all instances with SA
+name: Run all instances with Hexaly
 
 on:
   workflow_dispatch:
+    inputs:
+        type_solving:
+          description: 'Type of solving method (hexaly / simulatedAnnealing)'
+          required: true
+          default: 'simulatedAnnealing'
+          type: string
 
 jobs:
-  run-all-instances-with-sa:
+  run-all-instances-with-hexaly:
     runs-on: ubuntu-latest
 
     permissions:
@@ -23,10 +29,22 @@ jobs:
 
       - name: Install dependencies
         run: |
+          pip install hexaly -i https://pip.hexaly.com
+      
+      - name: Create Hexaly license file
+        run: |
+          sudo mkdir -p /opt/hexaly_14_0
+          echo "$HEXALY_LICENSE" | sudo tee /opt/hexaly_14_0/license.dat > /dev/null
+        env:
+          HEXALY_LICENSE: ${{ secrets.HEXALY_LICENSE }}
+
+
+      - name: Install dependencies
+        run: |
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
       - name: Run script
-        run: python runAllInstancesWithSA.py
+        run: python ${{ github.event.inputs.type_solving }}/runAllInstances.py
         # change to your actual script name
 
       - name: Commit and push changes

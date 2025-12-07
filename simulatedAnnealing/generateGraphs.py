@@ -1,0 +1,124 @@
+import json
+import matplotlib.pyplot as plt
+import pandas as pd
+import os
+import re
+from datetime import datetime
+# ---------------------------
+# Generic plotting functions
+# ---------------------------
+
+def plot_metric_by_param(df, metric, ylabel):
+    """Plot a given metric (runtime, visited nodes, objective) grouped by 'type'."""
+    unique_types = df["type"].unique()
+
+    for t in unique_types:
+        subset = df[df["type"] == t]
+
+        grouped = subset.groupby("param_value", as_index=False)[metric].mean()
+
+         # Try to sort numerically if possible
+        try:
+            grouped["param_value_numeric"] = pd.to_numeric(grouped["param_value"])
+            grouped = grouped.sort_values("param_value_numeric")
+            x = grouped["param_value_numeric"]
+        except:
+            x = grouped["param_value"]  # keep categorical order
+
+        y = grouped[metric]
+
+        plt.figure(figsize=(8,5))
+        plt.plot(x, y, marker="o")
+        plt.title(f"{ylabel} vs Parameter Value ({t})")
+        plt.xlabel("Parameter value")
+        plt.ylabel(ylabel)
+        plt.grid(True)
+        plt.tight_layout()
+
+        plt.savefig(f"graphs/{metric}_{t}.png")
+        plt.close()
+
+
+def plot_scatter_runtime_objective(df):
+    """Scatter plot to detect relationships between runtime and objective."""
+    plt.figure(figsize=(8,5))
+    plt.scatter(df["num_pickers"], df["runtime"])
+    plt.title("Runtime vs Number of Pickers")
+    plt.xlabel("Number of Pickers")
+    plt.ylabel("Runtime (ms)")
+    plt.grid(True)
+    plt.tight_layout()
+
+    plt.savefig(f"graphs/runtime_vs_objective.png")
+    plt.close()
+
+
+def bar_chart_metric(df, metric, ylabel):
+    """Bar chart of averaged metrics grouped by type and param_value."""
+    grouped = df.groupby(["type", "param_value"], as_index=False)[metric].mean()
+
+    plt.figure(figsize=(12,5))
+    labels = grouped["type"] + " - " + grouped["param_value"].astype(str)
+    plt.bar(labels, grouped[metric])
+
+    plt.title(f"Averaged {ylabel} per Type/Value")
+    plt.xticks(rotation=45, ha="right")
+    plt.ylabel(ylabel)
+    plt.tight_layout()
+
+    plt.savefig(f"graphs/bar_{metric}.png")
+    plt.close()
+
+def extract_datetime(filename: str) -> datetime | None:
+    """
+    Extracts a datetime object from a filename like:
+    'results_2025-12-07_12-26-37.json'
+    """
+    match = re.search(r"(\d{4}-\d{2}-\d{2})_(\d{2}-\d{2}-\d{2})", filename)
+    if not match:
+        return None
+
+    date_part, time_part = match.groups()
+    timestamp = f"{date_part} {time_part.replace('-', ':')}"
+    return datetime.strptime(timestamp, "%Y-%m-%d %H:%M:%S")
+
+# ---------------------------
+# Generate all graphs
+# ---------------------------
+
+files = os.listdir("results")
+json_files = [f for f in files if f.startswith("results_") and f.endswith(".json")]
+latest_file = None
+latest_dt = None
+
+for f in json_files:
+    dt = extract_datetime(f)
+    print(f, dt)
+    if dt is None:
+        # skip files without a recognizable timestamp
+        continue
+    if latest_dt is None or dt > latest_dt:
+        latest_dt = dt
+        latest_file = f
+
+print(f"Processing file: {latest_file}")
+with open(f"results/{latest_file}", "r") as f:
+    data = json.load(f)
+
+df = pd.DataFrame(data)
+
+# Convert numeric fields
+numeric_columns = ["runtime", "visited_nodes", "num_pickers", "visited_nodes"]
+for col in numeric_columns:
+    df[col] = pd.to_numeric(df[col], errors="coerce")
+
+plot_metric_by_param(df, "runtime", "Runtime (ms)")
+plot_metric_by_param(df, "num_pickers", "Amount of Pickers")
+plot_metric_by_param(df, "visited_nodes", "Visited Nodes")
+
+plot_scatter_runtime_objective(df)
+
+bar_chart_metric(df, "runtime", "Runtime")
+bar_chart_metric(df, "visited_nodes", "Visited Nodes")
+
+print("Graphs generated!")

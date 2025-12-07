@@ -8,6 +8,11 @@ on:
         required: true
         default: 'instances/instance-1_amountItems-2.json'
         type: string
+      type_solving:
+          description: 'Type of solving method (hexaly / simulatedAnnealing)'
+          required: true
+          default: 'simulatedAnnealing'
+          type: string
 
 jobs:
   run-one-instance:
@@ -45,7 +50,7 @@ jobs:
 
       - name: Run script
         run: |
-          python runOneInstance.py ${{ github.event.inputs.instance_file }}
+          python ${{ github.event.inputs.type_solving }}/runOneInstance.py ${{ github.event.inputs.instance_file }}
         # change to your actual script name
 
       - name: Commit and push changes
