@@ -226,7 +226,6 @@ def simulated_annealing_fixed_pickers(problem, num_pickers, T0=100, alpha=0.95,
     
     while stagnation_counter < stagnation_threshold:
         accepted_moves = 0
-        
         for iteration in range(max_iter_per_temp):
             neighbor = generate_neighbor(current_solution, problem, num_pickers)
             neighbor_penalty, neighbor_valid = problem.evaluate_solution(neighbor, num_pickers)
@@ -261,7 +260,7 @@ def simulated_annealing_fixed_pickers(problem, num_pickers, T0=100, alpha=0.95,
     return best_solution, best_valid, best_penalty, visited_nodes
 
 
-def iterative_simulated_annealing(problem, T0=100, alpha=0.95, max_iter_per_temp=100,
+def iterative_simulated_annealing(problem, logging=False, T0=100, alpha=0.95, max_iter_per_temp=100,
                                   stagnation_threshold=30, max_pickers=None):
     """
     Iteratively try to find valid solution with minimum number of pickers
@@ -270,24 +269,27 @@ def iterative_simulated_annealing(problem, T0=100, alpha=0.95, max_iter_per_temp
     if max_pickers is None:
         max_pickers = problem.num_pickers
     
-    # print("=== ITERATIVE SIMULATED ANNEALING ===")
-    # print(f"Total items to collect: {len(problem.items)}")
-    # print(f"Capacity per route: {problem.capacity}")
-    # print(f"Max time per route: {problem.max_time}")
-    # print()
+    if logging:
+        print("=== ITERATIVE SIMULATED ANNEALING ===")
+        print(f"Total items to collect: {len(problem.items)}")
+        print(f"Capacity per route: {problem.capacity}")
+        print(f"Max time per route: {problem.max_time}")
+        print()
     
     total_visited = 0
     optimization_results = []
     
     # Calculate theoretical minimum pickers needed
     min_pickers_capacity = math.ceil(len(problem.items) / problem.capacity)
-    # print(f"Theoretical minimum (capacity only): {min_pickers_capacity} pickers\n")
+    if logging:
+        print(f"Theoretical minimum (capacity only): {min_pickers_capacity} pickers\n")
     
     best_solution = None
     best_num_pickers = None
     
     for num_pickers in range(1, max_pickers + 1):
-        # print(f"--- Trying with {num_pickers} picker{'s' if num_pickers > 1 else ''} ---")
+        if logging:
+            print(f"--- Trying with {num_pickers} picker{'s' if num_pickers > 1 else ''} ---")
         
         solution, is_valid, penalty, visited = simulated_annealing_fixed_pickers(
             problem, num_pickers, T0, alpha, max_iter_per_temp, stagnation_threshold
@@ -296,17 +298,20 @@ def iterative_simulated_annealing(problem, T0=100, alpha=0.95, max_iter_per_temp
         total_visited += visited
         
         if is_valid:
-            # print(f"✓ VALID solution found with {num_pickers} picker{'s' if num_pickers > 1 else ''}!")
+            if logging:
+                print(f"✓ Valid solution found with {num_pickers} picker{'s' if num_pickers > 1 else ''}!")
             best_solution = solution
             best_num_pickers = num_pickers
             optimization_results.append(num_pickers)
             break
         else:
-            # print(f"✗ No valid solution found (penalty: {penalty:.0f})")
+            if logging:
+                print(f"✗ No valid solution found (penalty: {penalty:.0f})")
             optimization_results.append(float('inf'))
     
     if best_solution is None:
-        # print(f"\n⚠ Could not find valid solution with up to {max_pickers} pickers")
+        if logging:
+            print(f"\n⚠ Could not find valid solution with up to {max_pickers} pickers")
         # Return best attempt
         best_num_pickers = max_pickers
         best_solution, _, _, _ = simulated_annealing_fixed_pickers(

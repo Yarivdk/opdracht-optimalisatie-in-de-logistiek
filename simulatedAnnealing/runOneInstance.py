@@ -22,7 +22,8 @@ problem = OrderPickingProblem(instance)
 start_time = time.time()
 # print("Starting Iterative Simulated Annealing...\n")
 visited, solution, sa_results = iterative_simulated_annealing(
-    problem, 
+    problem,
+    logging=True, 
     T0=100, 
     alpha=0.95, 
     max_iter_per_temp=100,
@@ -31,9 +32,9 @@ visited, solution, sa_results = iterative_simulated_annealing(
 end_time = time.time()
 run_time = end_time - start_time
 run_time_ms = int(run_time * 1000)
-# print(f"Total nodes visited: {visited}")
-# print(f"Number of pickers used: {solution[0]}")
-# print(f"Solution is valid: {solution[2]}")
+print(f"Total nodes visited: {visited}")
+print(f"Number of pickers used: {solution[0]}")
+print(f"Solution is valid: {solution[2]}")
 
 instance_results = {
     "visited_nodes": visited,
