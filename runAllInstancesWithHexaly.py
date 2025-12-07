@@ -25,7 +25,7 @@ for file in os.listdir(FOLDER):
         # break # Remove this break to run on all instances
 
 timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-with open(f"results/results_{timestamp}.json", "w") as out:
+with open(f"hexalyResults/results_{timestamp}.json", "w") as out:
     json.dump(results, out, indent=4)
 
-print(f"\nSaved → results/results_{timestamp}.json")
+print(f"\nSaved → hexalyResults/results_{timestamp}.json")

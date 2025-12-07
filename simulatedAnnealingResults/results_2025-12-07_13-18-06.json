@@ -1,0 +1,92 @@
+[
+    {
+        "visited": 65000,
+        "runtime": 2701,
+        "num_pickers": 4,
+        "is_valid": true,
+        "id": "100",
+        "type": "amountItems",
+        "param_value": "100"
+    },
+    {
+        "visited": 81700,
+        "runtime": 3579,
+        "num_pickers": 5,
+        "is_valid": true,
+        "id": "101",
+        "type": "amountItems",
+        "param_value": "105"
+    },
+    {
+        "visited": 90000,
+        "runtime": 3906,
+        "num_pickers": 5,
+        "is_valid": true,
+        "id": "102",
+        "type": "amountItems",
+        "param_value": "105"
+    },
+    {
+        "visited": 72000,
+        "runtime": 3084,
+        "num_pickers": 4,
+        "is_valid": true,
+        "id": "103",
+        "type": "amountItems",
+        "param_value": "105"
+    },
+    {
+        "visited": 72000,
+        "runtime": 3126,
+        "num_pickers": 4,
+        "is_valid": true,
+        "id": "104",
+        "type": "amountItems",
+        "param_value": "105"
+    },
+    {
+        "visited": 72000,
+        "runtime": 3109,
+        "num_pickers": 4,
+        "is_valid": true,
+        "id": "105",
+        "type": "amountItems",
+        "param_value": "105"
+    },
+    {
+        "visited": 85800,
+        "runtime": 3831,
+        "num_pickers": 5,
+        "is_valid": true,
+        "id": "106",
+        "type": "amountItems",
+        "param_value": "110"
+    },
+    {
+        "visited": 90000,
+        "runtime": 4030,
+        "num_pickers": 5,
+        "is_valid": true,
+        "id": "107",
+        "type": "amountItems",
+        "param_value": "110"
+    },
+    {
+        "visited": 70900,
+        "runtime": 3110,
+        "num_pickers": 4,
+        "is_valid": true,
+        "id": "108",
+        "type": "amountItems",
+        "param_value": "110"
+    },
+    {
+        "visited": 90000,
+        "runtime": 4051,
+        "num_pickers": 5,
+        "is_valid": true,
+        "id": "109",
+        "type": "amountItems",
+        "param_value": "110"
+    }
+]

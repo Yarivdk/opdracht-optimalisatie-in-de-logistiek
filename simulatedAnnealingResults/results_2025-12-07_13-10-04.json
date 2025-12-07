@@ -1,0 +1,10 @@
+[
+    {
+        "visited": 90000,
+        "num_pickers": 5,
+        "is_valid": true,
+        "id": "100",
+        "type": "amountItems",
+        "param_value": "100"
+    }
+]

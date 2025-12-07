@@ -23,22 +23,10 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install hexaly -i https://pip.hexaly.com
-      
-      - name: Create Hexaly license file
-        run: |
-          sudo mkdir -p /opt/hexaly_14_0
-          echo "$HEXALY_LICENSE" | sudo tee /opt/hexaly_14_0/license.dat > /dev/null
-        env:
-          HEXALY_LICENSE: ${{ secrets.HEXALY_LICENSE }}
-
-
-      - name: Install dependencies
-        run: |
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
       - name: Run script
-        run: python runAllInstances.py
+        run: python runAllInstancesWithSA.py
         # change to your actual script name
 
       - name: Commit and push changes

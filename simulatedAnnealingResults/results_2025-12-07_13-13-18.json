@@ -1,0 +1,82 @@
+[
+    {
+        "visited": 71200,
+        "num_pickers": 4,
+        "is_valid": true,
+        "id": "100",
+        "type": "amountItems",
+        "param_value": "100"
+    },
+    {
+        "visited": 72000,
+        "num_pickers": 4,
+        "is_valid": true,
+        "id": "101",
+        "type": "amountItems",
+        "param_value": "105"
+    },
+    {
+        "visited": 83500,
+        "num_pickers": 5,
+        "is_valid": true,
+        "id": "102",
+        "type": "amountItems",
+        "param_value": "105"
+    },
+    {
+        "visited": 83700,
+        "num_pickers": 5,
+        "is_valid": true,
+        "id": "103",
+        "type": "amountItems",
+        "param_value": "105"
+    },
+    {
+        "visited": 69500,
+        "num_pickers": 4,
+        "is_valid": true,
+        "id": "104",
+        "type": "amountItems",
+        "param_value": "105"
+    },
+    {
+        "visited": 90000,
+        "num_pickers": 5,
+        "is_valid": true,
+        "id": "105",
+        "type": "amountItems",
+        "param_value": "105"
+    },
+    {
+        "visited": 83400,
+        "num_pickers": 5,
+        "is_valid": true,
+        "id": "106",
+        "type": "amountItems",
+        "param_value": "110"
+    },
+    {
+        "visited": 90000,
+        "num_pickers": 5,
+        "is_valid": true,
+        "id": "107",
+        "type": "amountItems",
+        "param_value": "110"
+    },
+    {
+        "visited": 86300,
+        "num_pickers": 5,
+        "is_valid": true,
+        "id": "108",
+        "type": "amountItems",
+        "param_value": "110"
+    },
+    {
+        "visited": 85800,
+        "num_pickers": 5,
+        "is_valid": true,
+        "id": "109",
+        "type": "amountItems",
+        "param_value": "110"
+    }
+]
