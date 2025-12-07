@@ -30,13 +30,11 @@ jobs:
       - name: Install dependencies
         run: |
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-
-      - name: Switch to solving method directory
-        run: |
-          cd ${{ github.event.inputs.type_solving }}
       
       - name: Run script
-        run: python generateInstances.py
+        run: |
+          cd ${{ github.event.inputs.type_solving }}
+          python generateInstances.py
         # change to your actual script name
 
       - name: Commit and push changes

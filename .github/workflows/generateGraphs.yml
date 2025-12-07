@@ -2,11 +2,12 @@ name: Generate Graphs
 
 on:
   workflow_dispatch:
-    type_solving:
-          description: 'Type of solving method (hexaly / simulatedAnnealing)'
-          required: true
-          default: 'simulatedAnnealing'
-          type: string
+    inputs:
+      type_solving:
+            description: 'Type of solving method (hexaly / simulatedAnnealing)'
+            required: true
+            default: 'simulatedAnnealing'
+            type: string
 
 jobs:
   generate-graphs:
@@ -29,13 +30,11 @@ jobs:
       - name: Install dependencies
         run: |
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-
-      - name: Switch to solving method directory
-        run: |
-          cd ${{ github.event.inputs.type_solving }}
       
       - name: Run script
-        run: python generateGraphs.py
+        run: |
+          cd ${{ github.event.inputs.type_solving }}
+          python generateGraphs.py
         # change to your actual script name
 
       - name: Commit and push changes
