@@ -3,6 +3,7 @@ from simulatedAnnealing import *
 import json
 import time
 from datetime import datetime
+import pytz
 
 FOLDER = "instances"
 
@@ -54,7 +55,10 @@ for file in os.listdir(FOLDER):
         # if counter == 10:
             # break  # Remove this break to run on all instances
 
-timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+# brussels timezone
+brussels_tz = pytz.timezone("Europe/Brussels")
+current_time = datetime.now(brussels_tz)
+timestamp = current_time.strftime("%Y-%m-%d_%H-%M-%S")
 with open(f"simulatedAnnealingResults/results_{timestamp}.json", "w") as out:
     json.dump(results, out, indent=4)
 

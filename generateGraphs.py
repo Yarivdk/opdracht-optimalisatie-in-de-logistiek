@@ -2,13 +2,14 @@ import json
 import matplotlib.pyplot as plt
 import pandas as pd
 import os
-
+import re
+from datetime import datetime
 # ---------------------------
 # Generic plotting functions
 # ---------------------------
 
 def plot_metric_by_param(df, metric, ylabel, typeResults):
-    """Plot a given metric (runtime, iterations, objective) grouped by 'type'."""
+    """Plot a given metric (runtime, visited nodes, objective) grouped by 'type'."""
     unique_types = df["type"].unique()
 
     for t in unique_types:
@@ -68,26 +69,47 @@ def bar_chart_metric(df, metric, ylabel, typeResults):
     plt.savefig(f"graphs/{typeResults}/bar_{metric}.png")
     plt.close()
 
+def extract_datetime(filename: str) -> datetime | None:
+    """
+    Extracts a datetime object from a filename like:
+    'results_2025-12-07_12-26-37.json'
+    """
+    match = re.search(r"(\d{4}-\d{2}-\d{2})_(\d{2}-\d{2}-\d{2})", filename)
+    if not match:
+        return None
+
+    date_part, time_part = match.groups()
+    timestamp = f"{date_part} {time_part.replace('-', ':')}"
+    return datetime.strptime(timestamp, "%Y-%m-%d %H:%M:%S")
 
 # ---------------------------
 # Generate all graphs
 # ---------------------------
 
-# ---------------------------
-# Load your JSON file
-# ---------------------------
 for typeResults in ["simulatedAnnealingResults", "hexalyResults"]:
     files = os.listdir(typeResults)
     json_files = [f for f in files if f.startswith("results_") and f.endswith(".json")]
-    json_files.sort(reverse=True)  # sort descending to get the latest first
-    latest_file = json_files[0]
+    latest_file = None
+    latest_dt = None
+
+    for f in json_files:
+        dt = extract_datetime(f)
+        print(f, dt)
+        if dt is None:
+            # skip files without a recognizable timestamp
+            continue
+        if latest_dt is None or dt > latest_dt:
+            latest_dt = dt
+            latest_file = f
+    
+    print(f"Processing file: {latest_file}")
     with open(f"{typeResults}/{latest_file}", "r") as f:
         data = json.load(f)
 
     df = pd.DataFrame(data)
 
     # Convert numeric fields
-    numeric_columns = ["runtime", "iterations", "num_pickers", "visited_nodes"]
+    numeric_columns = ["runtime", "visited_nodes", "num_pickers", "visited_nodes"]
     for col in numeric_columns:
         df[col] = pd.to_numeric(df[col], errors="coerce")
 
@@ -95,7 +117,7 @@ for typeResults in ["simulatedAnnealingResults", "hexalyResults"]:
     plot_metric_by_param(df, "num_pickers", "Amount of Pickers", typeResults)
     plot_metric_by_param(df, "visited_nodes", "Visited Nodes", typeResults)
 
-    plot_scatter_runtime_objective(df)
+    plot_scatter_runtime_objective(df, typeResults)
 
     bar_chart_metric(df, "runtime", "Runtime", typeResults)
     bar_chart_metric(df, "visited_nodes", "Visited Nodes", typeResults)
