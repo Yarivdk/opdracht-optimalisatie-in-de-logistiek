@@ -36,6 +36,21 @@ print(f"Total nodes visited: {visited}")
 print(f"Number of pickers used: {solution[0]}")
 print(f"Solution is valid: {solution[2]}")
 
+print(f"\nRoutes:")
+
+for i, picker_routes in enumerate(solution[1]):
+    if any(route for route in picker_routes):
+        print(f"\nPicker {i+1}:")
+        for j, route in enumerate(picker_routes):
+            if route:
+                time = problem.calculate_route_time(route)
+                locations = [problem.product_locations[item] for item in route]
+                capacity_ok = len(route) <= problem.capacity
+                time_ok = time <= problem.max_time
+                status = "✓" if (capacity_ok and time_ok) else "✗"
+                print(f"  {status} Round {j+1}: Items {route} at locations {locations}")
+                print(f"      Capacity: {len(route)}/{problem.capacity}, Time: {time:.2f}/{problem.max_time}")
+
 instance_results = {
     "visited_nodes": visited,
     "runtime": run_time_ms,
