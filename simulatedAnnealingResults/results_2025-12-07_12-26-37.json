@@ -1,0 +1,92 @@
+[
+    {
+        "visited_nodes": 36000,
+        "runtime": 841,
+        "num_pickers": 2,
+        "is_valid": true,
+        "id": "27",
+        "type": "amountItems",
+        "param_value": "30"
+    },
+    {
+        "visited_nodes": 82900,
+        "runtime": 5660,
+        "num_pickers": 5,
+        "is_valid": true,
+        "id": "121",
+        "type": "amountItems",
+        "param_value": "125"
+    },
+    {
+        "visited_nodes": 36000,
+        "runtime": 981,
+        "num_pickers": 2,
+        "is_valid": true,
+        "id": "38",
+        "type": "amountItems",
+        "param_value": "40"
+    },
+    {
+        "visited_nodes": 70800,
+        "runtime": 3507,
+        "num_pickers": 4,
+        "is_valid": true,
+        "id": "81",
+        "type": "amountItems",
+        "param_value": "85"
+    },
+    {
+        "visited_nodes": 54000,
+        "runtime": 689,
+        "num_pickers": 3,
+        "is_valid": true,
+        "id": "135",
+        "type": "travelTimes",
+        "param_value": "medium"
+    },
+    {
+        "visited_nodes": 54000,
+        "runtime": 2253,
+        "num_pickers": 3,
+        "is_valid": true,
+        "id": "68",
+        "type": "amountItems",
+        "param_value": "70"
+    },
+    {
+        "visited_nodes": 54000,
+        "runtime": 2584,
+        "num_pickers": 3,
+        "is_valid": true,
+        "id": "76",
+        "type": "amountItems",
+        "param_value": "80"
+    },
+    {
+        "visited_nodes": 53000,
+        "runtime": 1985,
+        "num_pickers": 3,
+        "is_valid": true,
+        "id": "59",
+        "type": "amountItems",
+        "param_value": "60"
+    },
+    {
+        "visited_nodes": 36000,
+        "runtime": 771,
+        "num_pickers": 2,
+        "is_valid": true,
+        "id": "25",
+        "type": "amountItems",
+        "param_value": "25"
+    },
+    {
+        "visited_nodes": 86400,
+        "runtime": 5685,
+        "num_pickers": 5,
+        "is_valid": true,
+        "id": "120",
+        "type": "amountItems",
+        "param_value": "120"
+    }
+]
