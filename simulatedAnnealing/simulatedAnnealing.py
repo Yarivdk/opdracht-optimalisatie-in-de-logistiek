@@ -20,8 +20,8 @@ class OrderPickingProblem:
             return 0
         
         time = 0
-        # Start from depot (0) to first location
-        time += self.travel_times[0][self.product_locations[route[0]]]
+        # Start from depot (-1) to first location
+        time += self.travel_times[-1][self.product_locations[route[0]]]
         
         # Travel between locations
         for i in range(len(route) - 1):
@@ -30,7 +30,7 @@ class OrderPickingProblem:
             time += self.travel_times[loc1][loc2]
         
         # Return to depot
-        time += self.travel_times[self.product_locations[route[-1]]][0]
+        time += self.travel_times[self.product_locations[route[-1]]][-1]
         
         return time
     
