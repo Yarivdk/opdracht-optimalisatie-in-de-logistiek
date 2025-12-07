@@ -1,10 +1,10 @@
-name: Run all instances
+name: Run all instances with Hexaly
 
 on:
   workflow_dispatch:
 
 jobs:
-  run-all-instances:
+  run-all-instances-with-hexaly:
     runs-on: ubuntu-latest
 
     permissions:
