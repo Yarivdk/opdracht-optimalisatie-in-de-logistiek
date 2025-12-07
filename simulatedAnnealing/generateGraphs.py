@@ -87,7 +87,7 @@ def extract_datetime(filename: str) -> datetime | None:
 # ---------------------------
 
 files = os.listdir("results")
-json_files = [f for f in files if f.startswith("results_") and f.endswith(".json")]
+json_files = [f for f in files if f.startswith("results_") and f.endswith(".json") and not ("individual_instance" in f)]
 latest_file = None
 latest_dt = None
 
