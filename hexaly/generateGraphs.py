@@ -8,7 +8,7 @@ from datetime import datetime
 # Generic plotting functions
 # ---------------------------
 
-def plot_metric_by_param(df, metric, ylabel, typeResults):
+def plot_metric_by_param(df, metric, ylabel):
     """Plot a given metric (runtime, visited nodes, objective) grouped by 'type'."""
     unique_types = df["type"].unique()
 
@@ -35,11 +35,11 @@ def plot_metric_by_param(df, metric, ylabel, typeResults):
         plt.grid(True)
         plt.tight_layout()
 
-        plt.savefig(f"graphs/{typeResults}/{metric}_{t}.png")
+        plt.savefig(f"graphs/{metric}_{t}.png")
         plt.close()
 
 
-def plot_scatter_runtime_objective(df, typeResults):
+def plot_scatter_runtime_objective(df):
     """Scatter plot to detect relationships between runtime and objective."""
     plt.figure(figsize=(8,5))
     plt.scatter(df["num_pickers"], df["runtime"])
@@ -49,11 +49,11 @@ def plot_scatter_runtime_objective(df, typeResults):
     plt.grid(True)
     plt.tight_layout()
 
-    plt.savefig(f"graphs/{typeResults}/runtime_vs_objective.png")
+    plt.savefig(f"graphs/runtime_vs_objective.png")
     plt.close()
 
 
-def bar_chart_metric(df, metric, ylabel, typeResults):
+def bar_chart_metric(df, metric, ylabel):
     """Bar chart of averaged metrics grouped by type and param_value."""
     grouped = df.groupby(["type", "param_value"], as_index=False)[metric].mean()
 
@@ -66,7 +66,7 @@ def bar_chart_metric(df, metric, ylabel, typeResults):
     plt.ylabel(ylabel)
     plt.tight_layout()
 
-    plt.savefig(f"graphs/{typeResults}/bar_{metric}.png")
+    plt.savefig(f"graphs/bar_{metric}.png")
     plt.close()
 
 def extract_datetime(filename: str) -> datetime | None:
@@ -86,41 +86,40 @@ def extract_datetime(filename: str) -> datetime | None:
 # Generate all graphs
 # ---------------------------
 
-for typeResults in ["simulatedAnnealingResults", "hexalyResults"]:
-    files = os.listdir(typeResults)
-    json_files = [f for f in files if f.startswith("results_") and f.endswith(".json")]
-    latest_file = None
-    latest_dt = None
 
-    for f in json_files:
-        dt = extract_datetime(f)
-        print(f, dt)
-        if dt is None:
-            # skip files without a recognizable timestamp
-            continue
-        if latest_dt is None or dt > latest_dt:
-            latest_dt = dt
-            latest_file = f
-    
-    print(f"Processing file: {latest_file}")
-    with open(f"{typeResults}/{latest_file}", "r") as f:
-        data = json.load(f)
+files = os.listdir("results")
+json_files = [f for f in files if f.startswith("results_") and f.endswith(".json")]
+latest_file = None
+latest_dt = None
 
-    df = pd.DataFrame(data)
+for f in json_files:
+    dt = extract_datetime(f)
+    print(f, dt)
+    if dt is None:
+        # skip files without a recognizable timestamp
+        continue
+    if latest_dt is None or dt > latest_dt:
+        latest_dt = dt
+        latest_file = f
 
-    # Convert numeric fields
-    numeric_columns = ["runtime", "visited_nodes", "num_pickers", "visited_nodes"]
-    for col in numeric_columns:
-        df[col] = pd.to_numeric(df[col], errors="coerce")
+print(f"Processing file: {latest_file}")
+with open(f"results/{latest_file}", "r") as f:
+    data = json.load(f)
 
-    plot_metric_by_param(df, "runtime", "Runtime (ms)", typeResults)
-    plot_metric_by_param(df, "num_pickers", "Amount of Pickers", typeResults)
-    plot_metric_by_param(df, "visited_nodes", "Visited Nodes", typeResults)
+df = pd.DataFrame(data)
 
-    plot_scatter_runtime_objective(df, typeResults)
+# Convert numeric fields
+numeric_columns = ["runtime", "visited_nodes", "num_pickers", "visited_nodes"]
+for col in numeric_columns:
+    df[col] = pd.to_numeric(df[col], errors="coerce")
 
-    bar_chart_metric(df, "runtime", "Runtime", typeResults)
-    bar_chart_metric(df, "visited_nodes", "Visited Nodes", typeResults)
+plot_metric_by_param(df, "runtime", "Runtime (ms)")
+plot_metric_by_param(df, "num_pickers", "Amount of Pickers")
+plot_metric_by_param(df, "visited_nodes", "Visited Nodes")
 
-    print("Graphs generated!")
-    break # Remove break to process both result types
+plot_scatter_runtime_objective(df)
+
+bar_chart_metric(df, "runtime", "Runtime")
+bar_chart_metric(df, "visited_nodes", "Visited Nodes")
+
+print("Graphs generated!")

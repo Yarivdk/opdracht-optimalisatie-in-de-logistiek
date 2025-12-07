@@ -59,7 +59,7 @@ for file in os.listdir(FOLDER):
 brussels_tz = pytz.timezone("Europe/Brussels")
 current_time = datetime.now(brussels_tz)
 timestamp = current_time.strftime("%Y-%m-%d_%H-%M-%S")
-with open(f"simulatedAnnealingResults/results_{timestamp}.json", "w") as out:
+with open(f"results/results_{timestamp}.json", "w") as out:
     json.dump(results, out, indent=4)
 
-print(f"\nSaved → simulatedAnnealingResults/results_{timestamp}.json")
+print(f"\nSaved → results/results_{timestamp}.json")
