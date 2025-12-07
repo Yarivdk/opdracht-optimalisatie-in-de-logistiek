@@ -25,6 +25,15 @@ TRAVEL_TIME_RANGES = {
     "long": (20, 30)
 }
 
+# empty the folder first
+for filename in os.listdir(OUTPUT_FOLDER):
+    file_path = os.path.join(OUTPUT_FOLDER, filename)
+    try:
+        if os.path.isfile(file_path):
+            os.unlink(file_path)
+    except Exception as e:
+        print(f"Error deleting file {file_path}: {e}")
+
 counter = 1
 for amountItems in ITEMS_SET:
     for instance_number in range(INSTANCES_PER_CONFIGURATION):
