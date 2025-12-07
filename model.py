@@ -44,12 +44,14 @@ def run_model(input_file=None, timeLimit=60):
 
         runtime = None
         iterations = None
+        is_valid = False
         for result in sorted_timestamps_per_solution:
             if result["status"] == 1:  # infeasible
                 continue
             elif result["objective_value"] == obj_value:
                 runtime = result["time"]
                 iterations = result["iterations"]
+                is_valid = True
                 break
 
         gap = solution.get_objective_gap(0)
@@ -60,8 +62,9 @@ def run_model(input_file=None, timeLimit=60):
         # --------------------------------------------------------------------
         results = {
             "runtime": runtime,
-            "iterations": iterations,
-            "objective_value": obj_value,
+            "visited_nodes": iterations,
+            "num_pickers": obj_value,
+            "is_valid": is_valid,
             "best_bound": bound,
             "gap": gap
         }
