@@ -2,6 +2,12 @@ name: Generate instances
 
 on:
   workflow_dispatch:
+    inputs:
+      type_solving:
+            description: 'Type of solving method (hexaly / simulatedAnnealing)'
+            required: true
+            default: 'simulatedAnnealing'
+            type: string
 
 jobs:
   generate-instances:
@@ -25,6 +31,10 @@ jobs:
         run: |
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
+      - name: Switch to solving method directory
+        run: |
+          cd ${{ github.event.inputs.type_solving }}
+      
       - name: Run script
         run: python generateInstances.py
         # change to your actual script name

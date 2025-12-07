@@ -48,9 +48,13 @@ jobs:
         run: |
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
+      - name: Switch to solving method directory
+        run: |
+          cd ${{ github.event.inputs.type_solving }}
+
       - name: Run script
         run: |
-          python ${{ github.event.inputs.type_solving }}/runOneInstance.py ${{ github.event.inputs.instance_file }}
+          python runOneInstance.py ${{ github.event.inputs.instance_file }}
         # change to your actual script name
 
       - name: Commit and push changes
