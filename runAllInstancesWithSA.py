@@ -51,8 +51,8 @@ for file in os.listdir(FOLDER):
         # time.sleep(2)
 
         counter += 1
-        if counter == 10:
-            break  # Remove this break to run on all instances
+        # if counter == 10:
+            # break  # Remove this break to run on all instances
 
 timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 with open(f"simulatedAnnealingResults/results_{timestamp}.json", "w") as out:
