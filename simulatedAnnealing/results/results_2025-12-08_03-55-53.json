@@ -1,0 +1,1577 @@
+[
+    {
+        "visited_nodes": 432000,
+        "runtime": 102307,
+        "num_pickers": 24,
+        "is_valid": true,
+        "id": "91",
+        "type": "amountItems",
+        "param_value": "455"
+    },
+    {
+        "visited_nodes": 378000,
+        "runtime": 80307,
+        "num_pickers": 21,
+        "is_valid": true,
+        "id": "81",
+        "type": "amountItems",
+        "param_value": "405"
+    },
+    {
+        "visited_nodes": 684000,
+        "runtime": 247882,
+        "num_pickers": 38,
+        "is_valid": true,
+        "id": "138",
+        "type": "amountItems",
+        "param_value": "680"
+    },
+    {
+        "visited_nodes": 234000,
+        "runtime": 33790,
+        "num_pickers": 13,
+        "is_valid": true,
+        "id": "57",
+        "type": "amountItems",
+        "param_value": "280"
+    },
+    {
+        "visited_nodes": 756000,
+        "runtime": 294750,
+        "num_pickers": 42,
+        "is_valid": true,
+        "id": "150",
+        "type": "amountItems",
+        "param_value": "730"
+    },
+    {
+        "visited_nodes": 64700,
+        "runtime": 3826,
+        "num_pickers": 4,
+        "is_valid": true,
+        "id": "25",
+        "type": "amountItems",
+        "param_value": "105"
+    },
+    {
+        "visited_nodes": 396000,
+        "runtime": 94511,
+        "num_pickers": 22,
+        "is_valid": true,
+        "id": "94",
+        "type": "amountItems",
+        "param_value": "455"
+    },
+    {
+        "visited_nodes": 54000,
+        "runtime": 700,
+        "num_pickers": 3,
+        "is_valid": true,
+        "id": "168",
+        "type": "travelTimes",
+        "param_value": "medium"
+    },
+    {
+        "visited_nodes": 89200,
+        "runtime": 5271,
+        "num_pickers": 5,
+        "is_valid": true,
+        "id": "21",
+        "type": "amountItems",
+        "param_value": "105"
+    },
+    {
+        "visited_nodes": 810000,
+        "runtime": 339270,
+        "num_pickers": 45,
+        "is_valid": true,
+        "id": "156",
+        "type": "amountItems",
+        "param_value": "780"
+    },
+    {
+        "visited_nodes": 252000,
+        "runtime": 37114,
+        "num_pickers": 14,
+        "is_valid": true,
+        "id": "56",
+        "type": "amountItems",
+        "param_value": "280"
+    },
+    {
+        "visited_nodes": 18000,
+        "runtime": 224,
+        "num_pickers": 1,
+        "is_valid": true,
+        "id": "162",
+        "type": "travelTimes",
+        "param_value": "short"
+    },
+    {
+        "visited_nodes": 702000,
+        "runtime": 266484,
+        "num_pickers": 39,
+        "is_valid": true,
+        "id": "143",
+        "type": "amountItems",
+        "param_value": "705"
+    },
+    {
+        "visited_nodes": 756000,
+        "runtime": 305008,
+        "num_pickers": 42,
+        "is_valid": true,
+        "id": "152",
+        "type": "amountItems",
+        "param_value": "755"
+    },
+    {
+        "visited_nodes": 90000,
+        "runtime": 6361,
+        "num_pickers": 5,
+        "is_valid": true,
+        "id": "26",
+        "type": "amountItems",
+        "param_value": "130"
+    },
+    {
+        "visited_nodes": 486000,
+        "runtime": 131198,
+        "num_pickers": 27,
+        "is_valid": true,
+        "id": "101",
+        "type": "amountItems",
+        "param_value": "505"
+    },
+    {
+        "visited_nodes": 504000,
+        "runtime": 143696,
+        "num_pickers": 28,
+        "is_valid": true,
+        "id": "107",
+        "type": "amountItems",
+        "param_value": "530"
+    },
+    {
+        "visited_nodes": 126000,
+        "runtime": 10464,
+        "num_pickers": 7,
+        "is_valid": true,
+        "id": "32",
+        "type": "amountItems",
+        "param_value": "155"
+    },
+    {
+        "visited_nodes": 756000,
+        "runtime": 299174,
+        "num_pickers": 42,
+        "is_valid": true,
+        "id": "147",
+        "type": "amountItems",
+        "param_value": "730"
+    },
+    {
+        "visited_nodes": 90000,
+        "runtime": 6364,
+        "num_pickers": 5,
+        "is_valid": true,
+        "id": "27",
+        "type": "amountItems",
+        "param_value": "130"
+    },
+    {
+        "visited_nodes": 666000,
+        "runtime": 244305,
+        "num_pickers": 37,
+        "is_valid": true,
+        "id": "136",
+        "type": "amountItems",
+        "param_value": "680"
+    },
+    {
+        "visited_nodes": 702000,
+        "runtime": 266087,
+        "num_pickers": 39,
+        "is_valid": true,
+        "id": "141",
+        "type": "amountItems",
+        "param_value": "705"
+    },
+    {
+        "visited_nodes": 612000,
+        "runtime": 208329,
+        "num_pickers": 34,
+        "is_valid": true,
+        "id": "127",
+        "type": "amountItems",
+        "param_value": "630"
+    },
+    {
+        "visited_nodes": 450000,
+        "runtime": 115022,
+        "num_pickers": 25,
+        "is_valid": true,
+        "id": "96",
+        "type": "amountItems",
+        "param_value": "480"
+    },
+    {
+        "visited_nodes": 306000,
+        "runtime": 57300,
+        "num_pickers": 17,
+        "is_valid": true,
+        "id": "74",
+        "type": "amountItems",
+        "param_value": "355"
+    },
+    {
+        "visited_nodes": 178300,
+        "runtime": 21322,
+        "num_pickers": 10,
+        "is_valid": true,
+        "id": "48",
+        "type": "amountItems",
+        "param_value": "230"
+    },
+    {
+        "visited_nodes": 49100,
+        "runtime": 1712,
+        "num_pickers": 3,
+        "is_valid": true,
+        "id": "11",
+        "type": "amountItems",
+        "param_value": "55"
+    },
+    {
+        "visited_nodes": 702000,
+        "runtime": 266433,
+        "num_pickers": 39,
+        "is_valid": true,
+        "id": "144",
+        "type": "amountItems",
+        "param_value": "705"
+    },
+    {
+        "visited_nodes": 684000,
+        "runtime": 241045,
+        "num_pickers": 38,
+        "is_valid": true,
+        "id": "134",
+        "type": "amountItems",
+        "param_value": "655"
+    },
+    {
+        "visited_nodes": 83400,
+        "runtime": 4934,
+        "num_pickers": 5,
+        "is_valid": true,
+        "id": "22",
+        "type": "amountItems",
+        "param_value": "105"
+    },
+    {
+        "visited_nodes": 162000,
+        "runtime": 17460,
+        "num_pickers": 9,
+        "is_valid": true,
+        "id": "43",
+        "type": "amountItems",
+        "param_value": "205"
+    },
+    {
+        "visited_nodes": 54000,
+        "runtime": 695,
+        "num_pickers": 3,
+        "is_valid": true,
+        "id": "169",
+        "type": "travelTimes",
+        "param_value": "medium"
+    },
+    {
+        "visited_nodes": 396000,
+        "runtime": 90705,
+        "num_pickers": 22,
+        "is_valid": true,
+        "id": "88",
+        "type": "amountItems",
+        "param_value": "430"
+    },
+    {
+        "visited_nodes": 18000,
+        "runtime": 216,
+        "num_pickers": 1,
+        "is_valid": true,
+        "id": "161",
+        "type": "travelTimes",
+        "param_value": "short"
+    },
+    {
+        "visited_nodes": 36000,
+        "runtime": 418,
+        "num_pickers": 2,
+        "is_valid": true,
+        "id": "166",
+        "type": "travelTimes",
+        "param_value": "medium"
+    },
+    {
+        "visited_nodes": 144000,
+        "runtime": 13679,
+        "num_pickers": 8,
+        "is_valid": true,
+        "id": "37",
+        "type": "amountItems",
+        "param_value": "180"
+    },
+    {
+        "visited_nodes": 216000,
+        "runtime": 31442,
+        "num_pickers": 12,
+        "is_valid": true,
+        "id": "60",
+        "type": "amountItems",
+        "param_value": "280"
+    },
+    {
+        "visited_nodes": 36000,
+        "runtime": 409,
+        "num_pickers": 2,
+        "is_valid": true,
+        "id": "170",
+        "type": "travelTimes",
+        "param_value": "medium"
+    },
+    {
+        "visited_nodes": 198000,
+        "runtime": 26316,
+        "num_pickers": 11,
+        "is_valid": true,
+        "id": "53",
+        "type": "amountItems",
+        "param_value": "255"
+    },
+    {
+        "visited_nodes": 252000,
+        "runtime": 39902,
+        "num_pickers": 14,
+        "is_valid": true,
+        "id": "63",
+        "type": "amountItems",
+        "param_value": "305"
+    },
+    {
+        "visited_nodes": 432000,
+        "runtime": 104773,
+        "num_pickers": 24,
+        "is_valid": true,
+        "id": "95",
+        "type": "amountItems",
+        "param_value": "455"
+    },
+    {
+        "visited_nodes": 67300,
+        "runtime": 3199,
+        "num_pickers": 4,
+        "is_valid": true,
+        "id": "19",
+        "type": "amountItems",
+        "param_value": "80"
+    },
+    {
+        "visited_nodes": 144000,
+        "runtime": 2514,
+        "num_pickers": 8,
+        "is_valid": true,
+        "id": "175",
+        "type": "travelTimes",
+        "param_value": "long"
+    },
+    {
+        "visited_nodes": 630000,
+        "runtime": 213609,
+        "num_pickers": 35,
+        "is_valid": true,
+        "id": "130",
+        "type": "amountItems",
+        "param_value": "630"
+    },
+    {
+        "visited_nodes": 46400,
+        "runtime": 1596,
+        "num_pickers": 3,
+        "is_valid": true,
+        "id": "15",
+        "type": "amountItems",
+        "param_value": "55"
+    },
+    {
+        "visited_nodes": 720000,
+        "runtime": 291150,
+        "num_pickers": 40,
+        "is_valid": true,
+        "id": "142",
+        "type": "amountItems",
+        "param_value": "705"
+    },
+    {
+        "visited_nodes": 324000,
+        "runtime": 64834,
+        "num_pickers": 18,
+        "is_valid": true,
+        "id": "79",
+        "type": "amountItems",
+        "param_value": "380"
+    },
+    {
+        "visited_nodes": 306000,
+        "runtime": 53750,
+        "num_pickers": 17,
+        "is_valid": true,
+        "id": "69",
+        "type": "amountItems",
+        "param_value": "330"
+    },
+    {
+        "visited_nodes": 144000,
+        "runtime": 15546,
+        "num_pickers": 8,
+        "is_valid": true,
+        "id": "42",
+        "type": "amountItems",
+        "param_value": "205"
+    },
+    {
+        "visited_nodes": 252000,
+        "runtime": 39935,
+        "num_pickers": 14,
+        "is_valid": true,
+        "id": "64",
+        "type": "amountItems",
+        "param_value": "305"
+    },
+    {
+        "visited_nodes": 54000,
+        "runtime": 2594,
+        "num_pickers": 3,
+        "is_valid": true,
+        "id": "20",
+        "type": "amountItems",
+        "param_value": "80"
+    },
+    {
+        "visited_nodes": 630000,
+        "runtime": 222434,
+        "num_pickers": 35,
+        "is_valid": true,
+        "id": "131",
+        "type": "amountItems",
+        "param_value": "655"
+    },
+    {
+        "visited_nodes": 396000,
+        "runtime": 90666,
+        "num_pickers": 22,
+        "is_valid": true,
+        "id": "86",
+        "type": "amountItems",
+        "param_value": "430"
+    },
+    {
+        "visited_nodes": 54000,
+        "runtime": 2566,
+        "num_pickers": 3,
+        "is_valid": true,
+        "id": "18",
+        "type": "amountItems",
+        "param_value": "80"
+    },
+    {
+        "visited_nodes": 450000,
+        "runtime": 115390,
+        "num_pickers": 25,
+        "is_valid": true,
+        "id": "99",
+        "type": "amountItems",
+        "param_value": "480"
+    },
+    {
+        "visited_nodes": 144000,
+        "runtime": 2534,
+        "num_pickers": 8,
+        "is_valid": true,
+        "id": "173",
+        "type": "travelTimes",
+        "param_value": "long"
+    },
+    {
+        "visited_nodes": 684000,
+        "runtime": 252497,
+        "num_pickers": 38,
+        "is_valid": true,
+        "id": "137",
+        "type": "amountItems",
+        "param_value": "680"
+    },
+    {
+        "visited_nodes": 90000,
+        "runtime": 6319,
+        "num_pickers": 5,
+        "is_valid": true,
+        "id": "29",
+        "type": "amountItems",
+        "param_value": "130"
+    },
+    {
+        "visited_nodes": 648000,
+        "runtime": 228170,
+        "num_pickers": 36,
+        "is_valid": true,
+        "id": "132",
+        "type": "amountItems",
+        "param_value": "655"
+    },
+    {
+        "visited_nodes": 270000,
+        "runtime": 43307,
+        "num_pickers": 15,
+        "is_valid": true,
+        "id": "62",
+        "type": "amountItems",
+        "param_value": "305"
+    },
+    {
+        "visited_nodes": 396000,
+        "runtime": 90333,
+        "num_pickers": 22,
+        "is_valid": true,
+        "id": "87",
+        "type": "amountItems",
+        "param_value": "430"
+    },
+    {
+        "visited_nodes": 84000,
+        "runtime": 5982,
+        "num_pickers": 5,
+        "is_valid": true,
+        "id": "28",
+        "type": "amountItems",
+        "param_value": "130"
+    },
+    {
+        "visited_nodes": 270000,
+        "runtime": 42643,
+        "num_pickers": 15,
+        "is_valid": true,
+        "id": "61",
+        "type": "amountItems",
+        "param_value": "305"
+    },
+    {
+        "visited_nodes": 288000,
+        "runtime": 50257,
+        "num_pickers": 16,
+        "is_valid": true,
+        "id": "68",
+        "type": "amountItems",
+        "param_value": "330"
+    },
+    {
+        "visited_nodes": 144000,
+        "runtime": 13817,
+        "num_pickers": 8,
+        "is_valid": true,
+        "id": "40",
+        "type": "amountItems",
+        "param_value": "180"
+    },
+    {
+        "visited_nodes": 18000,
+        "runtime": 225,
+        "num_pickers": 1,
+        "is_valid": true,
+        "id": "165",
+        "type": "travelTimes",
+        "param_value": "short"
+    },
+    {
+        "visited_nodes": 756000,
+        "runtime": 308185,
+        "num_pickers": 42,
+        "is_valid": true,
+        "id": "155",
+        "type": "amountItems",
+        "param_value": "755"
+    },
+    {
+        "visited_nodes": 522000,
+        "runtime": 150202,
+        "num_pickers": 29,
+        "is_valid": true,
+        "id": "106",
+        "type": "amountItems",
+        "param_value": "530"
+    },
+    {
+        "visited_nodes": 18000,
+        "runtime": 199,
+        "num_pickers": 1,
+        "is_valid": true,
+        "id": "3",
+        "type": "amountItems",
+        "param_value": "5"
+    },
+    {
+        "visited_nodes": 792000,
+        "runtime": 324400,
+        "num_pickers": 44,
+        "is_valid": true,
+        "id": "154",
+        "type": "amountItems",
+        "param_value": "755"
+    },
+    {
+        "visited_nodes": 126000,
+        "runtime": 10571,
+        "num_pickers": 7,
+        "is_valid": true,
+        "id": "31",
+        "type": "amountItems",
+        "param_value": "155"
+    },
+    {
+        "visited_nodes": 288000,
+        "runtime": 50608,
+        "num_pickers": 16,
+        "is_valid": true,
+        "id": "70",
+        "type": "amountItems",
+        "param_value": "330"
+    },
+    {
+        "visited_nodes": 414000,
+        "runtime": 94825,
+        "num_pickers": 23,
+        "is_valid": true,
+        "id": "89",
+        "type": "amountItems",
+        "param_value": "430"
+    },
+    {
+        "visited_nodes": 576000,
+        "runtime": 188785,
+        "num_pickers": 32,
+        "is_valid": true,
+        "id": "124",
+        "type": "amountItems",
+        "param_value": "605"
+    },
+    {
+        "visited_nodes": 702000,
+        "runtime": 274545,
+        "num_pickers": 39,
+        "is_valid": true,
+        "id": "145",
+        "type": "amountItems",
+        "param_value": "705"
+    },
+    {
+        "visited_nodes": 360000,
+        "runtime": 72557,
+        "num_pickers": 20,
+        "is_valid": true,
+        "id": "76",
+        "type": "amountItems",
+        "param_value": "380"
+    },
+    {
+        "visited_nodes": 396000,
+        "runtime": 84947,
+        "num_pickers": 22,
+        "is_valid": true,
+        "id": "85",
+        "type": "amountItems",
+        "param_value": "405"
+    },
+    {
+        "visited_nodes": 666000,
+        "runtime": 237378,
+        "num_pickers": 37,
+        "is_valid": true,
+        "id": "135",
+        "type": "amountItems",
+        "param_value": "655"
+    },
+    {
+        "visited_nodes": 378000,
+        "runtime": 82387,
+        "num_pickers": 21,
+        "is_valid": true,
+        "id": "82",
+        "type": "amountItems",
+        "param_value": "405"
+    },
+    {
+        "visited_nodes": 198000,
+        "runtime": 26274,
+        "num_pickers": 11,
+        "is_valid": true,
+        "id": "51",
+        "type": "amountItems",
+        "param_value": "255"
+    },
+    {
+        "visited_nodes": 54000,
+        "runtime": 2558,
+        "num_pickers": 3,
+        "is_valid": true,
+        "id": "17",
+        "type": "amountItems",
+        "param_value": "80"
+    },
+    {
+        "visited_nodes": 72000,
+        "runtime": 4233,
+        "num_pickers": 4,
+        "is_valid": true,
+        "id": "23",
+        "type": "amountItems",
+        "param_value": "105"
+    },
+    {
+        "visited_nodes": 36000,
+        "runtime": 1246,
+        "num_pickers": 2,
+        "is_valid": true,
+        "id": "13",
+        "type": "amountItems",
+        "param_value": "55"
+    },
+    {
+        "visited_nodes": 522000,
+        "runtime": 154251,
+        "num_pickers": 29,
+        "is_valid": true,
+        "id": "112",
+        "type": "amountItems",
+        "param_value": "555"
+    },
+    {
+        "visited_nodes": 18000,
+        "runtime": 204,
+        "num_pickers": 1,
+        "is_valid": true,
+        "id": "5",
+        "type": "amountItems",
+        "param_value": "5"
+    },
+    {
+        "visited_nodes": 486000,
+        "runtime": 137902,
+        "num_pickers": 27,
+        "is_valid": true,
+        "id": "110",
+        "type": "amountItems",
+        "param_value": "530"
+    },
+    {
+        "visited_nodes": 18000,
+        "runtime": 204,
+        "num_pickers": 1,
+        "is_valid": true,
+        "id": "164",
+        "type": "travelTimes",
+        "param_value": "short"
+    },
+    {
+        "visited_nodes": 324000,
+        "runtime": 69332,
+        "num_pickers": 18,
+        "is_valid": true,
+        "id": "84",
+        "type": "amountItems",
+        "param_value": "405"
+    },
+    {
+        "visited_nodes": 540000,
+        "runtime": 161072,
+        "num_pickers": 30,
+        "is_valid": true,
+        "id": "111",
+        "type": "amountItems",
+        "param_value": "555"
+    },
+    {
+        "visited_nodes": 432000,
+        "runtime": 104581,
+        "num_pickers": 24,
+        "is_valid": true,
+        "id": "92",
+        "type": "amountItems",
+        "param_value": "455"
+    },
+    {
+        "visited_nodes": 774000,
+        "runtime": 328305,
+        "num_pickers": 43,
+        "is_valid": true,
+        "id": "160",
+        "type": "amountItems",
+        "param_value": "780"
+    },
+    {
+        "visited_nodes": 576000,
+        "runtime": 181112,
+        "num_pickers": 32,
+        "is_valid": true,
+        "id": "120",
+        "type": "amountItems",
+        "param_value": "580"
+    },
+    {
+        "visited_nodes": 126000,
+        "runtime": 10684,
+        "num_pickers": 7,
+        "is_valid": true,
+        "id": "35",
+        "type": "amountItems",
+        "param_value": "155"
+    },
+    {
+        "visited_nodes": 18000,
+        "runtime": 210,
+        "num_pickers": 1,
+        "is_valid": true,
+        "id": "163",
+        "type": "travelTimes",
+        "param_value": "short"
+    },
+    {
+        "visited_nodes": 486000,
+        "runtime": 131191,
+        "num_pickers": 27,
+        "is_valid": true,
+        "id": "105",
+        "type": "amountItems",
+        "param_value": "505"
+    },
+    {
+        "visited_nodes": 468000,
+        "runtime": 120762,
+        "num_pickers": 26,
+        "is_valid": true,
+        "id": "98",
+        "type": "amountItems",
+        "param_value": "480"
+    },
+    {
+        "visited_nodes": 125200,
+        "runtime": 10495,
+        "num_pickers": 7,
+        "is_valid": true,
+        "id": "34",
+        "type": "amountItems",
+        "param_value": "155"
+    },
+    {
+        "visited_nodes": 144000,
+        "runtime": 2519,
+        "num_pickers": 8,
+        "is_valid": true,
+        "id": "172",
+        "type": "travelTimes",
+        "param_value": "long"
+    },
+    {
+        "visited_nodes": 324000,
+        "runtime": 61074,
+        "num_pickers": 18,
+        "is_valid": true,
+        "id": "71",
+        "type": "amountItems",
+        "param_value": "355"
+    },
+    {
+        "visited_nodes": 720000,
+        "runtime": 284467,
+        "num_pickers": 40,
+        "is_valid": true,
+        "id": "148",
+        "type": "amountItems",
+        "param_value": "730"
+    },
+    {
+        "visited_nodes": 216000,
+        "runtime": 28959,
+        "num_pickers": 12,
+        "is_valid": true,
+        "id": "52",
+        "type": "amountItems",
+        "param_value": "255"
+    },
+    {
+        "visited_nodes": 450000,
+        "runtime": 115006,
+        "num_pickers": 25,
+        "is_valid": true,
+        "id": "100",
+        "type": "amountItems",
+        "param_value": "480"
+    },
+    {
+        "visited_nodes": 540000,
+        "runtime": 168712,
+        "num_pickers": 30,
+        "is_valid": true,
+        "id": "117",
+        "type": "amountItems",
+        "param_value": "580"
+    },
+    {
+        "visited_nodes": 198000,
+        "runtime": 26193,
+        "num_pickers": 11,
+        "is_valid": true,
+        "id": "54",
+        "type": "amountItems",
+        "param_value": "255"
+    },
+    {
+        "visited_nodes": 144000,
+        "runtime": 15540,
+        "num_pickers": 8,
+        "is_valid": true,
+        "id": "41",
+        "type": "amountItems",
+        "param_value": "205"
+    },
+    {
+        "visited_nodes": 414000,
+        "runtime": 95104,
+        "num_pickers": 23,
+        "is_valid": true,
+        "id": "90",
+        "type": "amountItems",
+        "param_value": "430"
+    },
+    {
+        "visited_nodes": 18000,
+        "runtime": 202,
+        "num_pickers": 1,
+        "is_valid": true,
+        "id": "2",
+        "type": "amountItems",
+        "param_value": "5"
+    },
+    {
+        "visited_nodes": 612000,
+        "runtime": 207234,
+        "num_pickers": 34,
+        "is_valid": true,
+        "id": "126",
+        "type": "amountItems",
+        "param_value": "630"
+    },
+    {
+        "visited_nodes": 774000,
+        "runtime": 319086,
+        "num_pickers": 43,
+        "is_valid": true,
+        "id": "151",
+        "type": "amountItems",
+        "param_value": "755"
+    },
+    {
+        "visited_nodes": 342000,
+        "runtime": 68643,
+        "num_pickers": 19,
+        "is_valid": true,
+        "id": "78",
+        "type": "amountItems",
+        "param_value": "380"
+    },
+    {
+        "visited_nodes": 72000,
+        "runtime": 3426,
+        "num_pickers": 4,
+        "is_valid": true,
+        "id": "16",
+        "type": "amountItems",
+        "param_value": "80"
+    },
+    {
+        "visited_nodes": 36000,
+        "runtime": 852,
+        "num_pickers": 2,
+        "is_valid": true,
+        "id": "10",
+        "type": "amountItems",
+        "param_value": "30"
+    },
+    {
+        "visited_nodes": 234000,
+        "runtime": 34101,
+        "num_pickers": 13,
+        "is_valid": true,
+        "id": "59",
+        "type": "amountItems",
+        "param_value": "280"
+    },
+    {
+        "visited_nodes": 270000,
+        "runtime": 43042,
+        "num_pickers": 15,
+        "is_valid": true,
+        "id": "65",
+        "type": "amountItems",
+        "param_value": "305"
+    },
+    {
+        "visited_nodes": 36000,
+        "runtime": 811,
+        "num_pickers": 2,
+        "is_valid": true,
+        "id": "9",
+        "type": "amountItems",
+        "param_value": "30"
+    },
+    {
+        "visited_nodes": 36000,
+        "runtime": 837,
+        "num_pickers": 2,
+        "is_valid": true,
+        "id": "7",
+        "type": "amountItems",
+        "param_value": "30"
+    },
+    {
+        "visited_nodes": 126000,
+        "runtime": 12076,
+        "num_pickers": 7,
+        "is_valid": true,
+        "id": "36",
+        "type": "amountItems",
+        "param_value": "180"
+    },
+    {
+        "visited_nodes": 198000,
+        "runtime": 23966,
+        "num_pickers": 11,
+        "is_valid": true,
+        "id": "47",
+        "type": "amountItems",
+        "param_value": "230"
+    },
+    {
+        "visited_nodes": 576000,
+        "runtime": 188537,
+        "num_pickers": 32,
+        "is_valid": true,
+        "id": "121",
+        "type": "amountItems",
+        "param_value": "605"
+    },
+    {
+        "visited_nodes": 306000,
+        "runtime": 53954,
+        "num_pickers": 17,
+        "is_valid": true,
+        "id": "66",
+        "type": "amountItems",
+        "param_value": "330"
+    },
+    {
+        "visited_nodes": 42500,
+        "runtime": 1478,
+        "num_pickers": 3,
+        "is_valid": true,
+        "id": "14",
+        "type": "amountItems",
+        "param_value": "55"
+    },
+    {
+        "visited_nodes": 42900,
+        "runtime": 1477,
+        "num_pickers": 3,
+        "is_valid": true,
+        "id": "12",
+        "type": "amountItems",
+        "param_value": "55"
+    },
+    {
+        "visited_nodes": 324000,
+        "runtime": 61239,
+        "num_pickers": 18,
+        "is_valid": true,
+        "id": "73",
+        "type": "amountItems",
+        "param_value": "355"
+    },
+    {
+        "visited_nodes": 36000,
+        "runtime": 417,
+        "num_pickers": 2,
+        "is_valid": true,
+        "id": "167",
+        "type": "travelTimes",
+        "param_value": "medium"
+    },
+    {
+        "visited_nodes": 234000,
+        "runtime": 31303,
+        "num_pickers": 13,
+        "is_valid": true,
+        "id": "55",
+        "type": "amountItems",
+        "param_value": "255"
+    },
+    {
+        "visited_nodes": 360000,
+        "runtime": 72923,
+        "num_pickers": 20,
+        "is_valid": true,
+        "id": "80",
+        "type": "amountItems",
+        "param_value": "380"
+    },
+    {
+        "visited_nodes": 594000,
+        "runtime": 194420,
+        "num_pickers": 33,
+        "is_valid": true,
+        "id": "122",
+        "type": "amountItems",
+        "param_value": "605"
+    },
+    {
+        "visited_nodes": 144000,
+        "runtime": 15439,
+        "num_pickers": 8,
+        "is_valid": true,
+        "id": "44",
+        "type": "amountItems",
+        "param_value": "205"
+    },
+    {
+        "visited_nodes": 648000,
+        "runtime": 220294,
+        "num_pickers": 36,
+        "is_valid": true,
+        "id": "129",
+        "type": "amountItems",
+        "param_value": "630"
+    },
+    {
+        "visited_nodes": 576000,
+        "runtime": 181124,
+        "num_pickers": 32,
+        "is_valid": true,
+        "id": "116",
+        "type": "amountItems",
+        "param_value": "580"
+    },
+    {
+        "visited_nodes": 36000,
+        "runtime": 838,
+        "num_pickers": 2,
+        "is_valid": true,
+        "id": "6",
+        "type": "amountItems",
+        "param_value": "30"
+    },
+    {
+        "visited_nodes": 108000,
+        "runtime": 7784,
+        "num_pickers": 6,
+        "is_valid": true,
+        "id": "30",
+        "type": "amountItems",
+        "param_value": "130"
+    },
+    {
+        "visited_nodes": 576000,
+        "runtime": 171855,
+        "num_pickers": 32,
+        "is_valid": true,
+        "id": "113",
+        "type": "amountItems",
+        "param_value": "555"
+    },
+    {
+        "visited_nodes": 342000,
+        "runtime": 73802,
+        "num_pickers": 19,
+        "is_valid": true,
+        "id": "83",
+        "type": "amountItems",
+        "param_value": "405"
+    },
+    {
+        "visited_nodes": 66700,
+        "runtime": 3942,
+        "num_pickers": 4,
+        "is_valid": true,
+        "id": "24",
+        "type": "amountItems",
+        "param_value": "105"
+    },
+    {
+        "visited_nodes": 198000,
+        "runtime": 24035,
+        "num_pickers": 11,
+        "is_valid": true,
+        "id": "46",
+        "type": "amountItems",
+        "param_value": "230"
+    },
+    {
+        "visited_nodes": 18000,
+        "runtime": 201,
+        "num_pickers": 1,
+        "is_valid": true,
+        "id": "1",
+        "type": "amountItems",
+        "param_value": "5"
+    },
+    {
+        "visited_nodes": 144000,
+        "runtime": 2530,
+        "num_pickers": 8,
+        "is_valid": true,
+        "id": "174",
+        "type": "travelTimes",
+        "param_value": "long"
+    },
+    {
+        "visited_nodes": 450000,
+        "runtime": 121066,
+        "num_pickers": 25,
+        "is_valid": true,
+        "id": "102",
+        "type": "amountItems",
+        "param_value": "505"
+    },
+    {
+        "visited_nodes": 810000,
+        "runtime": 342583,
+        "num_pickers": 45,
+        "is_valid": true,
+        "id": "158",
+        "type": "amountItems",
+        "param_value": "780"
+    },
+    {
+        "visited_nodes": 684000,
+        "runtime": 251908,
+        "num_pickers": 38,
+        "is_valid": true,
+        "id": "139",
+        "type": "amountItems",
+        "param_value": "680"
+    },
+    {
+        "visited_nodes": 36000,
+        "runtime": 840,
+        "num_pickers": 2,
+        "is_valid": true,
+        "id": "8",
+        "type": "amountItems",
+        "param_value": "30"
+    },
+    {
+        "visited_nodes": 576000,
+        "runtime": 180151,
+        "num_pickers": 32,
+        "is_valid": true,
+        "id": "118",
+        "type": "amountItems",
+        "param_value": "580"
+    },
+    {
+        "visited_nodes": 450000,
+        "runtime": 109497,
+        "num_pickers": 25,
+        "is_valid": true,
+        "id": "93",
+        "type": "amountItems",
+        "param_value": "455"
+    },
+    {
+        "visited_nodes": 828000,
+        "runtime": 354096,
+        "num_pickers": 46,
+        "is_valid": true,
+        "id": "159",
+        "type": "amountItems",
+        "param_value": "780"
+    },
+    {
+        "visited_nodes": 144000,
+        "runtime": 13880,
+        "num_pickers": 8,
+        "is_valid": true,
+        "id": "38",
+        "type": "amountItems",
+        "param_value": "180"
+    },
+    {
+        "visited_nodes": 666000,
+        "runtime": 246022,
+        "num_pickers": 37,
+        "is_valid": true,
+        "id": "140",
+        "type": "amountItems",
+        "param_value": "680"
+    },
+    {
+        "visited_nodes": 540000,
+        "runtime": 161038,
+        "num_pickers": 30,
+        "is_valid": true,
+        "id": "114",
+        "type": "amountItems",
+        "param_value": "555"
+    },
+    {
+        "visited_nodes": 198000,
+        "runtime": 24005,
+        "num_pickers": 11,
+        "is_valid": true,
+        "id": "49",
+        "type": "amountItems",
+        "param_value": "230"
+    },
+    {
+        "visited_nodes": 612000,
+        "runtime": 201781,
+        "num_pickers": 34,
+        "is_valid": true,
+        "id": "125",
+        "type": "amountItems",
+        "param_value": "605"
+    },
+    {
+        "visited_nodes": 468000,
+        "runtime": 126731,
+        "num_pickers": 26,
+        "is_valid": true,
+        "id": "103",
+        "type": "amountItems",
+        "param_value": "505"
+    },
+    {
+        "visited_nodes": 522000,
+        "runtime": 142987,
+        "num_pickers": 29,
+        "is_valid": true,
+        "id": "104",
+        "type": "amountItems",
+        "param_value": "505"
+    },
+    {
+        "visited_nodes": 162000,
+        "runtime": 17532,
+        "num_pickers": 9,
+        "is_valid": true,
+        "id": "45",
+        "type": "amountItems",
+        "param_value": "205"
+    },
+    {
+        "visited_nodes": 306000,
+        "runtime": 53949,
+        "num_pickers": 17,
+        "is_valid": true,
+        "id": "67",
+        "type": "amountItems",
+        "param_value": "330"
+    },
+    {
+        "visited_nodes": 522000,
+        "runtime": 149085,
+        "num_pickers": 29,
+        "is_valid": true,
+        "id": "108",
+        "type": "amountItems",
+        "param_value": "530"
+    },
+    {
+        "visited_nodes": 486000,
+        "runtime": 125779,
+        "num_pickers": 27,
+        "is_valid": true,
+        "id": "97",
+        "type": "amountItems",
+        "param_value": "480"
+    },
+    {
+        "visited_nodes": 738000,
+        "runtime": 294238,
+        "num_pickers": 41,
+        "is_valid": true,
+        "id": "146",
+        "type": "amountItems",
+        "param_value": "730"
+    },
+    {
+        "visited_nodes": 522000,
+        "runtime": 155685,
+        "num_pickers": 29,
+        "is_valid": true,
+        "id": "115",
+        "type": "amountItems",
+        "param_value": "555"
+    },
+    {
+        "visited_nodes": 774000,
+        "runtime": 321630,
+        "num_pickers": 43,
+        "is_valid": true,
+        "id": "153",
+        "type": "amountItems",
+        "param_value": "755"
+    },
+    {
+        "visited_nodes": 144000,
+        "runtime": 2577,
+        "num_pickers": 8,
+        "is_valid": true,
+        "id": "171",
+        "type": "travelTimes",
+        "param_value": "long"
+    },
+    {
+        "visited_nodes": 306000,
+        "runtime": 57539,
+        "num_pickers": 17,
+        "is_valid": true,
+        "id": "75",
+        "type": "amountItems",
+        "param_value": "355"
+    },
+    {
+        "visited_nodes": 630000,
+        "runtime": 214016,
+        "num_pickers": 35,
+        "is_valid": true,
+        "id": "128",
+        "type": "amountItems",
+        "param_value": "630"
+    },
+    {
+        "visited_nodes": 576000,
+        "runtime": 181139,
+        "num_pickers": 32,
+        "is_valid": true,
+        "id": "119",
+        "type": "amountItems",
+        "param_value": "580"
+    },
+    {
+        "visited_nodes": 144000,
+        "runtime": 13837,
+        "num_pickers": 8,
+        "is_valid": true,
+        "id": "39",
+        "type": "amountItems",
+        "param_value": "180"
+    },
+    {
+        "visited_nodes": 234000,
+        "runtime": 34347,
+        "num_pickers": 13,
+        "is_valid": true,
+        "id": "58",
+        "type": "amountItems",
+        "param_value": "280"
+    },
+    {
+        "visited_nodes": 306000,
+        "runtime": 57670,
+        "num_pickers": 17,
+        "is_valid": true,
+        "id": "72",
+        "type": "amountItems",
+        "param_value": "355"
+    },
+    {
+        "visited_nodes": 612000,
+        "runtime": 216303,
+        "num_pickers": 34,
+        "is_valid": true,
+        "id": "133",
+        "type": "amountItems",
+        "param_value": "655"
+    },
+    {
+        "visited_nodes": 522000,
+        "runtime": 150238,
+        "num_pickers": 29,
+        "is_valid": true,
+        "id": "109",
+        "type": "amountItems",
+        "param_value": "530"
+    },
+    {
+        "visited_nodes": 360000,
+        "runtime": 72866,
+        "num_pickers": 20,
+        "is_valid": true,
+        "id": "77",
+        "type": "amountItems",
+        "param_value": "380"
+    },
+    {
+        "visited_nodes": 612000,
+        "runtime": 200417,
+        "num_pickers": 34,
+        "is_valid": true,
+        "id": "123",
+        "type": "amountItems",
+        "param_value": "605"
+    },
+    {
+        "visited_nodes": 108000,
+        "runtime": 8995,
+        "num_pickers": 6,
+        "is_valid": true,
+        "id": "33",
+        "type": "amountItems",
+        "param_value": "155"
+    },
+    {
+        "visited_nodes": 756000,
+        "runtime": 297960,
+        "num_pickers": 42,
+        "is_valid": true,
+        "id": "149",
+        "type": "amountItems",
+        "param_value": "730"
+    },
+    {
+        "visited_nodes": 828000,
+        "runtime": 352599,
+        "num_pickers": 46,
+        "is_valid": true,
+        "id": "157",
+        "type": "amountItems",
+        "param_value": "780"
+    },
+    {
+        "visited_nodes": 18000,
+        "runtime": 197,
+        "num_pickers": 1,
+        "is_valid": true,
+        "id": "4",
+        "type": "amountItems",
+        "param_value": "5"
+    },
+    {
+        "visited_nodes": 180000,
+        "runtime": 21658,
+        "num_pickers": 10,
+        "is_valid": true,
+        "id": "50",
+        "type": "amountItems",
+        "param_value": "230"
+    }
+]
