@@ -126,26 +126,26 @@
     ],
     "maxRoundsPerOrderPicker": 8,
     "orderPickerCategories": [
-        "Oceanography",
-        "Oceanography",
-        "Oceanography",
-        "Oceanography",
-        "Oceanography",
-        "Oceanography",
-        "Oceanography",
-        "Oceanography"
+        "Tableware",
+        "Tableware",
+        "Tableware",
+        "Tableware",
+        "Tableware",
+        "Tableware",
+        "Tableware",
+        "Tableware"
     ],
     "productCategories": [
-        "Oceanography",
-        "Oceanography",
-        "Oceanography",
-        "Oceanography",
-        "Oceanography",
-        "Oceanography",
-        "Oceanography",
-        "Oceanography"
+        "Tableware",
+        "Tableware",
+        "Tableware",
+        "Tableware",
+        "Tableware",
+        "Tableware",
+        "Tableware",
+        "Tableware"
     ],
     "categories": [
-        "Oceanography"
+        "Tableware"
     ]
 }

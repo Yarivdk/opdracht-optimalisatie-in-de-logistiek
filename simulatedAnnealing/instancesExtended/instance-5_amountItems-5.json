@@ -69,20 +69,20 @@
     ],
     "maxRoundsPerOrderPicker": 5,
     "orderPickerCategories": [
-        "Geography",
-        "Geography",
-        "Geography",
-        "Geography",
-        "Geography"
+        "Magazines",
+        "Magazines",
+        "Magazines",
+        "Magazines",
+        "Magazines"
     ],
     "productCategories": [
-        "Geography",
-        "Geography",
-        "Geography",
-        "Geography",
-        "Geography"
+        "Magazines",
+        "Magazines",
+        "Magazines",
+        "Magazines",
+        "Magazines"
     ],
     "categories": [
-        "Geography"
+        "Magazines"
     ]
 }

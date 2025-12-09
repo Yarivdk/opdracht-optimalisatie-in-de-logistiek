@@ -69,20 +69,20 @@
     ],
     "maxRoundsPerOrderPicker": 5,
     "orderPickerCategories": [
-        "Mining",
-        "Mining",
-        "Mining",
-        "Mining",
-        "Mining"
+        "Health Supplements",
+        "Health Supplements",
+        "Health Supplements",
+        "Health Supplements",
+        "Health Supplements"
     ],
     "productCategories": [
-        "Mining",
-        "Mining",
-        "Mining",
-        "Mining",
-        "Mining"
+        "Health Supplements",
+        "Health Supplements",
+        "Health Supplements",
+        "Health Supplements",
+        "Health Supplements"
     ],
     "categories": [
-        "Mining"
+        "Health Supplements"
     ]
 }

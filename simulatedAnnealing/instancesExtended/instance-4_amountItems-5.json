@@ -69,20 +69,20 @@
     ],
     "maxRoundsPerOrderPicker": 5,
     "orderPickerCategories": [
-        "Virtual Reality",
-        "Virtual Reality",
-        "Virtual Reality",
-        "Virtual Reality",
-        "Virtual Reality"
+        "Clothing",
+        "Clothing",
+        "Clothing",
+        "Clothing",
+        "Clothing"
     ],
     "productCategories": [
-        "Virtual Reality",
-        "Virtual Reality",
-        "Virtual Reality",
-        "Virtual Reality",
-        "Virtual Reality"
+        "Clothing",
+        "Clothing",
+        "Clothing",
+        "Clothing",
+        "Clothing"
     ],
     "categories": [
-        "Virtual Reality"
+        "Clothing"
     ]
 }

@@ -126,26 +126,26 @@
     ],
     "maxRoundsPerOrderPicker": 8,
     "orderPickerCategories": [
-        "Environment",
-        "Environment",
-        "Environment",
-        "Environment",
-        "Environment",
-        "Environment",
-        "Environment",
-        "Environment"
+        "Cleaning Supplies",
+        "Cleaning Supplies",
+        "Cleaning Supplies",
+        "Cleaning Supplies",
+        "Cleaning Supplies",
+        "Cleaning Supplies",
+        "Cleaning Supplies",
+        "Cleaning Supplies"
     ],
     "productCategories": [
-        "Environment",
-        "Environment",
-        "Environment",
-        "Environment",
-        "Environment",
-        "Environment",
-        "Environment",
-        "Environment"
+        "Cleaning Supplies",
+        "Cleaning Supplies",
+        "Cleaning Supplies",
+        "Cleaning Supplies",
+        "Cleaning Supplies",
+        "Cleaning Supplies",
+        "Cleaning Supplies",
+        "Cleaning Supplies"
     ],
     "categories": [
-        "Environment"
+        "Cleaning Supplies"
     ]
 }

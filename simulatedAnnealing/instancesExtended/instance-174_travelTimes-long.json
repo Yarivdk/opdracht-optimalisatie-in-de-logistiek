@@ -126,26 +126,26 @@
     ],
     "maxRoundsPerOrderPicker": 8,
     "orderPickerCategories": [
-        "Energy",
-        "Energy",
-        "Energy",
-        "Energy",
-        "Energy",
-        "Energy",
-        "Energy",
-        "Energy"
+        "Smartphones",
+        "Smartphones",
+        "Smartphones",
+        "Smartphones",
+        "Smartphones",
+        "Smartphones",
+        "Smartphones",
+        "Smartphones"
     ],
     "productCategories": [
-        "Energy",
-        "Energy",
-        "Energy",
-        "Energy",
-        "Energy",
-        "Energy",
-        "Energy",
-        "Energy"
+        "Smartphones",
+        "Smartphones",
+        "Smartphones",
+        "Smartphones",
+        "Smartphones",
+        "Smartphones",
+        "Smartphones",
+        "Smartphones"
     ],
     "categories": [
-        "Energy"
+        "Smartphones"
     ]
 }

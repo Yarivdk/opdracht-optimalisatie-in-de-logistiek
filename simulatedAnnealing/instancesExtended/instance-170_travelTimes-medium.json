@@ -126,26 +126,26 @@
     ],
     "maxRoundsPerOrderPicker": 8,
     "orderPickerCategories": [
-        "Transportation",
-        "Transportation",
-        "Transportation",
-        "Transportation",
-        "Transportation",
-        "Transportation",
-        "Transportation",
-        "Transportation"
+        "Tableware",
+        "Tableware",
+        "Tableware",
+        "Tableware",
+        "Tableware",
+        "Tableware",
+        "Tableware",
+        "Tableware"
     ],
     "productCategories": [
-        "Transportation",
-        "Transportation",
-        "Transportation",
-        "Transportation",
-        "Transportation",
-        "Transportation",
-        "Transportation",
-        "Transportation"
+        "Tableware",
+        "Tableware",
+        "Tableware",
+        "Tableware",
+        "Tableware",
+        "Tableware",
+        "Tableware",
+        "Tableware"
     ],
     "categories": [
-        "Transportation"
+        "Tableware"
     ]
 }

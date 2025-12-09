@@ -126,26 +126,26 @@
     ],
     "maxRoundsPerOrderPicker": 8,
     "orderPickerCategories": [
-        "Automotive",
-        "Automotive",
-        "Automotive",
-        "Automotive",
-        "Automotive",
-        "Automotive",
-        "Automotive",
-        "Automotive"
+        "Smartphones",
+        "Smartphones",
+        "Smartphones",
+        "Smartphones",
+        "Smartphones",
+        "Smartphones",
+        "Smartphones",
+        "Smartphones"
     ],
     "productCategories": [
-        "Automotive",
-        "Automotive",
-        "Automotive",
-        "Automotive",
-        "Automotive",
-        "Automotive",
-        "Automotive",
-        "Automotive"
+        "Smartphones",
+        "Smartphones",
+        "Smartphones",
+        "Smartphones",
+        "Smartphones",
+        "Smartphones",
+        "Smartphones",
+        "Smartphones"
     ],
     "categories": [
-        "Automotive"
+        "Smartphones"
     ]
 }
