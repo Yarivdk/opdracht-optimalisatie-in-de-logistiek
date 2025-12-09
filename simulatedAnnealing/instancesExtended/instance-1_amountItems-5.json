@@ -1,0 +1,88 @@
+{
+    "amountOrderPickers": 5,
+    "capacity": 10,
+    "maxTimePerRound": 60,
+    "amountWarehouses": 5,
+    "productLocations": [
+        4,
+        0,
+        2,
+        3,
+        1
+    ],
+    "travelTimeMatrix": [
+        [
+            999,
+            6,
+            5,
+            3,
+            1,
+            7
+        ],
+        [
+            2,
+            999,
+            3,
+            5,
+            4,
+            6
+        ],
+        [
+            4,
+            2,
+            999,
+            6,
+            8,
+            3
+        ],
+        [
+            6,
+            6,
+            1,
+            999,
+            9,
+            5
+        ],
+        [
+            8,
+            7,
+            4,
+            4,
+            999,
+            1
+        ],
+        [
+            10,
+            4,
+            1,
+            8,
+            4,
+            999
+        ]
+    ],
+    "items": [
+        0,
+        1,
+        2,
+        3,
+        4
+    ],
+    "maxRoundsPerOrderPicker": 5,
+    "orderPickerCategories": [
+        "Photography",
+        "Photography",
+        "Photography",
+        "Photography",
+        "Photography"
+    ],
+    "productCategories": [
+        "Photography",
+        "Photography",
+        "Photography",
+        "Photography",
+        "Photography"
+    ],
+    "categories": [
+        "Photography"
+    ]
+}

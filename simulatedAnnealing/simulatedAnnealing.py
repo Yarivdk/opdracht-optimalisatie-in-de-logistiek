@@ -302,6 +302,7 @@ def iterative_simulated_annealing(problem, logging=False, T0=100, alpha=0.95, ma
                 print(f"✓ Valid solution found with {num_pickers} picker{'s' if num_pickers > 1 else ''}!")
             best_solution = solution
             best_num_pickers = num_pickers
+            best_valid = is_valid
             optimization_results.append(num_pickers)
             break
         else:
@@ -314,10 +315,10 @@ def iterative_simulated_annealing(problem, logging=False, T0=100, alpha=0.95, ma
             print(f"\n⚠ Could not find valid solution with up to {max_pickers} pickers")
         # Return best attempt
         best_num_pickers = max_pickers
-        best_solution, _, _, _ = simulated_annealing_fixed_pickers(
+        best_solution, best_valid, _, _ = simulated_annealing_fixed_pickers(
             problem, max_pickers, T0, alpha, max_iter_per_temp, stagnation_threshold
         )
     
-    return total_visited, (best_num_pickers, best_solution, best_solution is not None), optimization_results
+    return total_visited, (best_num_pickers, best_solution, best_valid), optimization_results
     
     

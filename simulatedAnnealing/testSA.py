@@ -1,7 +1,7 @@
-from simulatedAnnealing import *
+from simulatedAnnealingExtended import *
 import json
 
-with open("instances/instance-100_amountItems-100.json", "r") as f:
+with open("instances/example-instance.json", "r") as f:
     instance = json.load(f)
 
 problem = OrderPickingProblem(instance)
@@ -9,6 +9,7 @@ problem = OrderPickingProblem(instance)
 print("Starting Iterative Simulated Annealing...\n")
 visited, solution, results = iterative_simulated_annealing(
     problem, 
+    logging=True,
     T0=100, 
     alpha=0.95, 
     max_iter_per_temp=100,
@@ -21,9 +22,9 @@ print(f"Number of pickers used: {solution[0]}")
 print(f"Solution is valid: {solution[2]}")
 print(f"\nRoutes:")
 
-for i, picker_routes in enumerate(solution[1]):
+for picker, picker_routes in solution[1].items():
     if any(route for route in picker_routes):
-        print(f"\nPicker {i+1}:")
+        print(f"\nPicker {picker} ({problem.picker_categories[picker]}):")
         for j, route in enumerate(picker_routes):
             if route:
                 time = problem.calculate_route_time(route)
@@ -36,7 +37,7 @@ for i, picker_routes in enumerate(solution[1]):
 
 # Verify all items collected
 all_items_collected = []
-for picker_routes in solution[1]:
+for picker_routes in solution[1].values():
     for route in picker_routes:
         all_items_collected.extend(route)
 

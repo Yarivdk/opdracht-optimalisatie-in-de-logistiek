@@ -1,0 +1,88 @@
+{
+    "amountOrderPickers": 5,
+    "capacity": 10,
+    "maxTimePerRound": 60,
+    "amountWarehouses": 5,
+    "productLocations": [
+        1,
+        3,
+        0,
+        4,
+        2
+    ],
+    "travelTimeMatrix": [
+        [
+            999,
+            6,
+            1,
+            10,
+            8,
+            7
+        ],
+        [
+            6,
+            999,
+            7,
+            6,
+            8,
+            6
+        ],
+        [
+            1,
+            3,
+            999,
+            1,
+            10,
+            1
+        ],
+        [
+            6,
+            4,
+            10,
+            999,
+            7,
+            4
+        ],
+        [
+            3,
+            3,
+            7,
+            10,
+            999,
+            6
+        ],
+        [
+            6,
+            6,
+            3,
+            1,
+            2,
+            999
+        ]
+    ],
+    "items": [
+        0,
+        1,
+        2,
+        3,
+        4
+    ],
+    "maxRoundsPerOrderPicker": 5,
+    "orderPickerCategories": [
+        "Geography",
+        "Geography",
+        "Geography",
+        "Geography",
+        "Geography"
+    ],
+    "productCategories": [
+        "Geography",
+        "Geography",
+        "Geography",
+        "Geography",
+        "Geography"
+    ],
+    "categories": [
+        "Geography"
+    ]
+}

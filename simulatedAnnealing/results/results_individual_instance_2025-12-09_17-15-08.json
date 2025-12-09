@@ -1,0 +1,11 @@
+[
+    {
+        "visited_nodes": 1224000,
+        "runtime": 340952,
+        "num_pickers": 68,
+        "is_valid": true,
+        "id": "101",
+        "type": "amountItems",
+        "param_value": "505"
+    }
+]
