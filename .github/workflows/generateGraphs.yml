@@ -12,7 +12,7 @@ on:
               - 'hexaly'
               - 'simulatedAnnealing'
       is_extended:
-            description: 'Whether to generate extended instances (yes / no)'
+            description: 'Whether to generate graphs for extended instances (yes / no)'
             required: true
             default: 'no'
             type: choice

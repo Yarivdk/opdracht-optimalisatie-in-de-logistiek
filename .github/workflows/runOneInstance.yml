@@ -17,7 +17,7 @@ on:
             - 'hexaly'
             - 'simulatedAnnealing'
       is_extended:
-            description: 'Whether to generate extended instances (yes / no)'
+            description: 'Whether to run an extended instance (yes / no)'
             required: true
             default: 'no'
             type: choice

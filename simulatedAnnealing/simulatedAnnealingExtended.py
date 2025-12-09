@@ -431,13 +431,13 @@ def iterative_simulated_annealing(problem, logging=False, T0=100, alpha=0.95, ma
     best_selected_pickers = None
     
     for num_pickers in range(1, max_pickers + 1):
-        if logging:
+        if problem.categories:
+            selected = select_diverse_pickers(problem, num_pickers)
+            cats_selected = [problem.picker_categories[p] for p in selected]
+        if logging: 
             print(f"--- Trying with {num_pickers} picker{'s' if num_pickers > 1 else ''} ---")
-            if problem.categories:
-                selected = select_diverse_pickers(problem, num_pickers)
-                cats_selected = [problem.picker_categories[p] for p in selected]
-                print(f"    Selected pickers: {selected}")
-                print(f"    Categories covered: {set(cats_selected)}")
+            print(f"    Selected pickers: {selected}")
+            print(f"    Categories covered: {set(cats_selected)}")
         
         solution, is_valid, penalty, visited, selected_pickers = simulated_annealing_fixed_pickers(
             problem, num_pickers, selected, T0, alpha, max_iter_per_temp, stagnation_threshold
