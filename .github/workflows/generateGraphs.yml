@@ -8,6 +8,17 @@ on:
             required: true
             default: 'simulatedAnnealing'
             type: string
+            options:
+              - 'hexaly'
+              - 'simulatedAnnealing'
+      is_extended:
+            description: 'Whether to generate extended instances (yes / no)'
+            required: true
+            default: 'no'
+            type: choice
+            options:
+              - 'yes'
+              - 'no'
 
 jobs:
   generate-graphs:
@@ -34,7 +45,11 @@ jobs:
       - name: Run script
         run: |
           cd ${{ github.event.inputs.type_solving }}
-          python generateGraphs.py
+          if [ "${{ github.event.inputs.is_extended }}" = "yes" ]; then
+            python generateGraphsExtended.py
+          else
+            python generateGraphs.py
+          fi
         # change to your actual script name
 
       - name: Commit and push changes

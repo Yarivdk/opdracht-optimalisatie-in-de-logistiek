@@ -7,7 +7,18 @@ on:
             description: 'Type of solving method (hexaly / simulatedAnnealing)'
             required: true
             default: 'simulatedAnnealing'
-            type: string
+            type: choice
+            options:
+              - 'hexaly'
+              - 'simulatedAnnealing'
+      is_extended:
+            description: 'Whether to generate extended instances (yes / no)'
+            required: true
+            default: 'no'
+            type: choice
+            options:
+              - 'yes'
+              - 'no'
 
 jobs:
   generate-instances:
@@ -34,7 +45,11 @@ jobs:
       - name: Run script
         run: |
           cd ${{ github.event.inputs.type_solving }}
-          python generateInstances.py
+          if [ "${{ github.event.inputs.is_extended }}" = "yes" ]; then
+            python generateInstancesExtended.py
+          else
+            python generateInstances.py
+          fi
         # change to your actual script name
 
       - name: Commit and push changes
