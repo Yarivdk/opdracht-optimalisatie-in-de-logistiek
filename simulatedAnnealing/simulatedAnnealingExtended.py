@@ -345,7 +345,6 @@ def simulated_annealing_fixed_pickers(problem, num_pickers, selected_pickers, T0
     Returns the best solution found and whether it's valid
     """
     current_solution, selected_pickers = create_initial_solution(problem, num_pickers, selected_pickers)
-    print(f"  Initial solution created with pickers: {selected_pickers}")
     current_penalty, is_valid = problem.evaluate_solution(current_solution, num_pickers)
     
     best_solution = copy.deepcopy(current_solution)
