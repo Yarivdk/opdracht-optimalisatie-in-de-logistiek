@@ -1,0 +1,88 @@
+{
+    "amountOrderPickers": 5,
+    "capacity": 10,
+    "maxTimePerRound": 60,
+    "amountWarehouses": 5,
+    "productLocations": [
+        3,
+        0,
+        1,
+        4,
+        2
+    ],
+    "travelTimeMatrix": [
+        [
+            999,
+            10,
+            10,
+            5,
+            1,
+            7
+        ],
+        [
+            3,
+            999,
+            1,
+            7,
+            2,
+            6
+        ],
+        [
+            10,
+            5,
+            999,
+            3,
+            8,
+            6
+        ],
+        [
+            10,
+            10,
+            7,
+            999,
+            3,
+            8
+        ],
+        [
+            2,
+            1,
+            7,
+            8,
+            999,
+            9
+        ],
+        [
+            7,
+            4,
+            4,
+            5,
+            6,
+            999
+        ]
+    ],
+    "items": [
+        0,
+        1,
+        2,
+        3,
+        4
+    ],
+    "maxRoundsPerOrderPicker": 5,
+    "orderPickerCategories": [
+        "Virtual Reality",
+        "Virtual Reality",
+        "Virtual Reality",
+        "Virtual Reality",
+        "Virtual Reality"
+    ],
+    "productCategories": [
+        "Virtual Reality",
+        "Virtual Reality",
+        "Virtual Reality",
+        "Virtual Reality",
+        "Virtual Reality"
+    ],
+    "categories": [
+        "Virtual Reality"
+    ]
+}

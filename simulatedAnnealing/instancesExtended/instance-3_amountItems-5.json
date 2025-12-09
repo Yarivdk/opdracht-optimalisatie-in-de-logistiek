@@ -1,0 +1,88 @@
+{
+    "amountOrderPickers": 5,
+    "capacity": 10,
+    "maxTimePerRound": 60,
+    "amountWarehouses": 5,
+    "productLocations": [
+        3,
+        0,
+        1,
+        2,
+        4
+    ],
+    "travelTimeMatrix": [
+        [
+            999,
+            9,
+            1,
+            10,
+            10,
+            3
+        ],
+        [
+            7,
+            999,
+            1,
+            2,
+            10,
+            7
+        ],
+        [
+            10,
+            7,
+            999,
+            2,
+            8,
+            2
+        ],
+        [
+            3,
+            8,
+            8,
+            999,
+            7,
+            10
+        ],
+        [
+            2,
+            2,
+            9,
+            10,
+            999,
+            10
+        ],
+        [
+            2,
+            5,
+            2,
+            8,
+            7,
+            999
+        ]
+    ],
+    "items": [
+        0,
+        1,
+        2,
+        3,
+        4
+    ],
+    "maxRoundsPerOrderPicker": 5,
+    "orderPickerCategories": [
+        "Mobile Development",
+        "Mobile Development",
+        "Mobile Development",
+        "Mobile Development",
+        "Mobile Development"
+    ],
+    "productCategories": [
+        "Mobile Development",
+        "Mobile Development",
+        "Mobile Development",
+        "Mobile Development",
+        "Mobile Development"
+    ],
+    "categories": [
+        "Mobile Development"
+    ]
+}
