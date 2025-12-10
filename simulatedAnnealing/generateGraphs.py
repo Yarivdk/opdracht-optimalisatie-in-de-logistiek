@@ -8,6 +8,25 @@ from datetime import datetime
 # Generic plotting functions
 # ---------------------------
 
+def sort_param_values(grouped):
+    """Sort parameter values with special handling for travelTimes."""
+    # Check if this looks like travelTimes data
+    if grouped['param_value'].astype(str).isin(['short', 'medium', 'long']).any():
+        # Define custom order for travel times
+        order = ['short', 'medium', 'long']
+        grouped['sort_key'] = grouped['param_value'].apply(lambda x: order.index(x) if x in order else 999)
+        grouped = grouped.sort_values('sort_key').drop('sort_key', axis=1)
+    else:
+        # Try numeric sort
+        try:
+            grouped['param_value_numeric'] = pd.to_numeric(grouped['param_value'])
+            grouped = grouped.sort_values('param_value_numeric').drop('param_value_numeric', axis=1)
+        except:
+            # Fall back to alphabetic sort
+            grouped = grouped.sort_values('param_value')
+    
+    return grouped
+
 def plot_metric_by_param(df, metric, ylabel):
     """Plot a given metric (runtime, visited nodes, objective) grouped by 'type'."""
     unique_types = df["type"].unique()
@@ -16,15 +35,9 @@ def plot_metric_by_param(df, metric, ylabel):
         subset = df[df["type"] == t]
 
         grouped = subset.groupby("param_value", as_index=False)[metric].mean()
+        grouped = sort_param_values(grouped)
 
-         # Try to sort numerically if possible
-        try:
-            grouped["param_value_numeric"] = pd.to_numeric(grouped["param_value"])
-            grouped = grouped.sort_values("param_value_numeric")
-            x = grouped["param_value_numeric"]
-        except:
-            x = grouped["param_value"]  # keep categorical order
-
+        x = grouped["param_value"]
         y = grouped[metric]
 
         plt.figure(figsize=(8,5))
@@ -37,6 +50,8 @@ def plot_metric_by_param(df, metric, ylabel):
 
         plt.savefig(f"graphs/{metric}_{t}.png")
         plt.close()
+
+        print(f"Plot of {ylabel} vs Parameter Value for type '{t}' saved.")
 
 
 def plot_scatter_runtime_objective(df):
@@ -51,6 +66,8 @@ def plot_scatter_runtime_objective(df):
 
     plt.savefig(f"graphs/runtime_vs_objective.png")
     plt.close()
+
+    print("Scatter plot of Runtime vs Number of Pickers saved.")
 
 
 def bar_chart_metric(df, metric, ylabel):
@@ -69,6 +86,22 @@ def bar_chart_metric(df, metric, ylabel):
     plt.savefig(f"graphs/bar_{metric}.png")
     plt.close()
 
+    print(f"Bar chart of {ylabel} saved.")
+
+def pie_chart_valid(df):
+    """Pie chart showing the proportion of valid vs invalid solutions."""
+    valid_counts = df['is_valid'].value_counts()
+
+    plt.figure(figsize=(6,6))
+    plt.pie(valid_counts, labels=valid_counts.index, autopct='%1.1f%%', startangle=140)
+    plt.title("Proportion of Valid vs Invalid Solutions")
+    plt.tight_layout()
+
+    plt.savefig("graphs/valid_solutions_pie_chart.png")
+    plt.close()
+
+    print("Pie chart of valid vs invalid solutions saved.")
+
 def extract_datetime(filename: str) -> datetime | None:
     """
     Extracts a datetime object from a filename like:
@@ -82,6 +115,7 @@ def extract_datetime(filename: str) -> datetime | None:
     timestamp = f"{date_part} {time_part.replace('-', ':')}"
     return datetime.strptime(timestamp, "%Y-%m-%d %H:%M:%S")
 
+
 # ---------------------------
 # Generate all graphs
 # ---------------------------
@@ -93,7 +127,6 @@ latest_dt = None
 
 for f in json_files:
     dt = extract_datetime(f)
-    print(f, dt)
     if dt is None:
         # skip files without a recognizable timestamp
         continue
@@ -111,8 +144,9 @@ df = pd.DataFrame(data)
 numeric_columns = ["runtime", "visited_nodes", "num_pickers", "visited_nodes"]
 for col in numeric_columns:
     df[col] = pd.to_numeric(df[col], errors="coerce")
+df["runtime"] = df["runtime"] / 1000  # convert to seconds
 
-plot_metric_by_param(df, "runtime", "Runtime (ms)")
+plot_metric_by_param(df, "runtime", "Runtime (s)")
 plot_metric_by_param(df, "num_pickers", "Amount of Pickers")
 plot_metric_by_param(df, "visited_nodes", "Visited Nodes")
 
@@ -120,5 +154,7 @@ plot_scatter_runtime_objective(df)
 
 bar_chart_metric(df, "runtime", "Runtime")
 bar_chart_metric(df, "visited_nodes", "Visited Nodes")
+
+pie_chart_valid(df)
 
 print("Graphs generated!")
