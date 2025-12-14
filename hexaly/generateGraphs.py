@@ -126,7 +126,6 @@ df = pd.DataFrame(data)
 numeric_columns = ["runtime", "objective_value", "iterations"]
 for col in numeric_columns:
     df[col] = pd.to_numeric(df[col], errors="coerce")
-df["runtime"] = df["runtime"] / 1000  # convert to seconds
 
 plot_metric_by_param(df, "runtime", "Runtime (s)")
 plot_metric_by_param(df, "objective_value", "Amount of Pickers")
