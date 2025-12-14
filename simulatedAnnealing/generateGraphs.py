@@ -60,7 +60,7 @@ def plot_scatter_runtime_objective(df):
     plt.scatter(df["num_pickers"], df["runtime"])
     plt.title("Runtime vs Number of Pickers")
     plt.xlabel("Number of Pickers")
-    plt.ylabel("Runtime (ms)")
+    plt.ylabel("Runtime (s)")
     plt.grid(True)
     plt.tight_layout()
 
