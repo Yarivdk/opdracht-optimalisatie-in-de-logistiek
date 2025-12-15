@@ -95,6 +95,7 @@ def plot_scatter_runtime_objective(df_original, df_extended):
     plt.figure(figsize=(8,5))
     plt.scatter(df_original["num_pickers"], df_original["runtime"], label="Original", alpha=0.7)
     plt.scatter(df_extended["num_pickers"], df_extended["runtime"], label="Extended", alpha=0.7)
+    plt.legend()
     plt.title("Runtime vs Number of Pickers")
     plt.xlabel("Number of Pickers")
     plt.ylabel("Runtime (s)")
