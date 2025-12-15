@@ -90,17 +90,18 @@ def plot_metric_by_param(df, metric, ylabel):
     
         print(f"Plot of {ylabel} vs Parameter Value for type '{t}' saved.")
 
-def plot_scatter_runtime_objective(df):
+def plot_scatter_runtime_objective(df_original, df_extended):
     """Scatter plot to detect relationships between runtime and objective."""
     plt.figure(figsize=(8,5))
-    plt.scatter(df["num_pickers"], df["runtime"])
+    plt.scatter(df_original["num_pickers"], df_original["runtime"], label="Original", alpha=0.7)
+    plt.scatter(df_extended["num_pickers"], df_extended["runtime"], label="Extended", alpha=0.7)
     plt.title("Runtime vs Number of Pickers")
     plt.xlabel("Number of Pickers")
     plt.ylabel("Runtime (s)")
     plt.grid(True)
     plt.tight_layout()
 
-    plt.savefig(f"graphsExtended/runtime_vs_objective.png")
+    plt.savefig(f"graphsExtended/comparison_runtime_vs_objective.png")
     plt.close()
 
     print("Scatter plot of Runtime vs Number of Pickers saved.")
