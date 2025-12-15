@@ -199,7 +199,7 @@ plot_metric_by_param(df_extended, "runtime", "Runtime (s)")
 plot_metric_by_param(df_extended, "num_pickers", "Amount of Pickers")
 plot_metric_by_param(df_extended, "visited_nodes", "Visited Nodes")
 
-plot_scatter_runtime_objective(df_extended)
+plot_scatter_runtime_objective(df_original,df_extended)
 
 pie_chart_valid(df_extended)
 
